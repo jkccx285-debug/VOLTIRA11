@@ -1,0 +1,1018 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#050914"><link rel="manifest" href="manifest.webmanifest"><link rel="icon" href="favicon.png"><link rel="apple-touch-icon" href="apple-touch-icon.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="description" content="ولتیرا؛ جعبه‌ابزار کامل الکترونیک: محاسبه‌گر، شبیه‌ساز، مرجع قطعات و دستیار هوشمند"><title>ولتیرا | ولتیرا</title>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#070912;--card:#0d1220;--tx:#f5f7ff;--mu:#a8b1c7;--ac:#00b7ff;--ac2:#ff9d00;--bd:#24304a}
+:root[data-theme=dark]{--bg:#03050b;--card:#080d18;--tx:#f8fbff;--mu:#9aa7c0;--ac:#00c8ff;--ac2:#ffad1f;--bd:#1d2942}
+*{box-sizing:border-box}html{scroll-padding-top:70px}body{margin:0;background:var(--bg);color:var(--tx);font-family:Vazirmatn,Tahoma,sans-serif;line-height:1.9}
+header{position:relative;text-align:center;background:linear-gradient(135deg,#0b7285,#1c4e80 60%,#5f3dc4);color:#fff;padding:26px 16px 22px;border-radius:0 0 28px 28px;box-shadow:0 8px 24px #0b728555}
+h1{margin:0;font-size:1.7rem;font-weight:800}header p{margin:4px 0 0;color:#ffffffd0;font-size:.9rem}
+.chips{display:flex;justify-content:center;flex-wrap:wrap;gap:6px;margin-top:12px}.chips span{background:#ffffff26;border:1px solid #ffffff40;border-radius:20px;padding:2px 12px;font-size:.78rem}
+#thm{position:absolute;left:12px;top:12px;border:1px solid #fff5;background:#ffffff26;color:#fff;border-radius:50%;width:38px;height:38px;font-size:1.1rem;cursor:pointer}
+nav{display:flex;gap:6px;padding:10px 8px;position:sticky;top:0;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);z-index:5;overflow-x:auto}
+nav button{flex:1;min-width:max-content;padding:10px 14px;border:1px solid var(--bd);background:var(--card);color:var(--tx);border-radius:22px;font:inherit;font-weight:600;cursor:pointer;transition:.2s}nav button:hover{transform:translateY(-1px)}nav button.on{background:linear-gradient(135deg,var(--ac),#5f3dc4);color:#fff;border-color:var(--ac);box-shadow:0 4px 12px #0b728566}
+main{max-width:860px;margin:auto;padding:8px 12px 40px}section{display:none}section.on{display:block}.card{background:var(--card);border:1px solid var(--bd);border-radius:16px;padding:14px;margin:12px 0;box-shadow:0 2px 14px #14213d12;transition:.2s}.card:hover{box-shadow:0 6px 22px #14213d1f}.card h3{margin:0 0 8px;color:var(--ac);display:flex;align-items:center;gap:6px;padding-bottom:6px;border-bottom:1px dashed var(--bd)}.help{color:var(--mu);font-size:.85rem;margin:0 0 8px}
+label{display:block;font-size:.85rem;color:var(--mu);margin:8px 0 2px}input,select,textarea{width:100%;padding:10px;border:1px solid var(--bd);border-radius:10px;background:var(--bg);color:var(--tx);font:inherit}input[type=number],input[type=text]{direction:ltr;text-align:right}select{direction:rtl}.row{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:8px}
+button.b{margin-top:10px;padding:10px 16px;border:0;border-radius:10px;background:linear-gradient(135deg,var(--ac2),#f76707);color:#fff;font:inherit;font-weight:600;cursor:pointer;box-shadow:0 3px 10px #e8590c44;transition:.2s}button.b:hover{filter:brightness(1.08);transform:translateY(-1px)}
+.out{margin-top:10px;padding:10px;border-radius:10px;background:var(--bg);border-right:4px solid var(--ac);min-height:20px}.res{display:flex;height:34px;width:230px;max-width:100%;margin:8px auto;border-radius:17px;background:#d9b382;overflow:hidden;justify-content:space-around;direction:ltr}.res i{width:16px;display:block}.tags{display:flex;flex-wrap:wrap;gap:6px}.tags button{padding:6px 12px;border:1px solid var(--bd);background:var(--bg);color:var(--tx);border-radius:20px;font:inherit;cursor:pointer}.sc{overflow-x:auto}table{width:100%;border-collapse:collapse;font-size:.9rem}td,th{padding:6px;border-bottom:1px solid var(--bd);text-align:right}canvas,svg{width:100%;max-width:100%;display:block;margin:auto}.ltr{direction:ltr;unicode-bidi:embed}pre{direction:ltr;text-align:left;background:var(--bg);padding:8px;border-radius:8px;overflow-x:auto;font-size:.8rem;margin:6px 0}.chat{max-height:340px;overflow-y:auto}.m{padding:8px 12px;margin:6px 0;border-radius:12px;max-width:92%;line-height:1.9}.u{background:var(--ac);color:#fff;margin-left:auto}.a{background:var(--bg);border:1px solid var(--bd)}footer{text-align:center;color:var(--mu);font-size:.8rem;padding:16px;border-top:1px solid var(--bd);margin-top:10px}
+@media(max-width:480px){h1{font-size:1.4rem}.card{padding:12px}}
+
+.logo-intro{padding:0;background:#000;border-radius:0 0 28px 28px;overflow:hidden;box-shadow:0 8px 24px #0b728555}
+.logo-intro img{display:block;width:100%;max-height:78vh;object-fit:cover;margin:0 auto}
+
+/* VOLTIRA visual theme */
+body{
+  background:
+    radial-gradient(circle at 50% -10%,#142b58 0,transparent 42%),
+    radial-gradient(circle at 10% 30%,#24064a 0,transparent 28%),
+    var(--bg);
+}
+header{
+  background:linear-gradient(135deg,#050914 0%,#10183a 48%,#210a42 100%);
+  border-bottom:1px solid #00b7ff66;
+  box-shadow:0 8px 35px #00b7ff22,0 0 80px #7b2cff18 inset;
+}
+header h1{
+  text-shadow:0 0 12px #00c8ff88,0 0 26px #7b2cff55;
+  letter-spacing:.5px;
+}
+nav{
+  border-bottom:1px solid #263452;
+}
+nav button{
+  background:linear-gradient(145deg,#0c1322,#111a2c);
+  border-color:#263653;
+  box-shadow:0 2px 10px #0008;
+}
+nav button.on{
+  background:linear-gradient(135deg,#0077ff,#7b2cff);
+  box-shadow:0 0 18px #0077ff55,0 4px 16px #0008;
+}
+.card{
+  background:linear-gradient(145deg,#0b111e,#0e1524);
+  border-color:#22304a;
+  box-shadow:0 5px 22px #0007,0 0 0 1px #00b7ff08 inset;
+}
+.card h3{
+  color:#48d5ff;
+  text-shadow:0 0 8px #00b7ff44;
+}
+input,select,textarea{
+  background:#060b14;
+  border-color:#263653;
+  color:var(--tx);
+}
+input:focus,select:focus,textarea:focus{
+  outline:none;
+  border-color:#00b7ff;
+  box-shadow:0 0 0 2px #00b7ff18,0 0 14px #00b7ff18;
+}
+button.b{
+  background:linear-gradient(135deg,#ff8a00,#ffb52e);
+  box-shadow:0 0 16px #ff9d0033,0 3px 10px #0008;
+}
+.out{
+  background:#070d18;
+  border-right-color:#00c8ff;
+  box-shadow:inset 0 0 20px #00b7ff08;
+}
+.logo-intro{
+  background:#020307;
+  border-bottom:1px solid #00b7ff55;
+  box-shadow:0 12px 35px #000,0 0 50px #7b2cff22;
+}
+.logo-intro img{
+  max-height:72vh;
+}
+footer{
+  background:#050812;
+  border-top-color:#1e2b43;
+}
+
+.voltira-landing{
+  width:100%;
+  min-height:100svh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:#02050c;
+  overflow:hidden;
+}
+.voltira-landing img{
+  display:block;
+  width:100%;
+  height:100svh;
+  object-fit:cover;
+  object-position:center;
+}
+@media(max-width:600px){
+  .voltira-landing img{
+    height:100svh;
+    object-fit:cover;
+  }
+}
+
+.enter-voltira{
+  position:absolute;
+  left:50%;
+  bottom:12.5%;
+  transform:translateX(-50%);
+  min-width:190px;
+  padding:14px 28px;
+  border:1px solid #61e7ff;
+  border-radius:16px;
+  color:#fff;
+  background:linear-gradient(135deg,#00aeea,#7b2cff);
+  box-shadow:0 0 24px #00c8ff88,0 0 35px #8b2cff55;
+  font:700 18px Vazirmatn,Tahoma,sans-serif;
+  cursor:pointer;
+  z-index:3;
+  transition:.2s;
+}
+.enter-voltira:hover{transform:translateX(-50%) scale(1.04);filter:brightness(1.1)}
+.enter-voltira:active{transform:translateX(-50%) scale(.98)}
+.voltira-landing{position:relative}
+.voltira-landing.exit{
+  animation:voltiraExit .45s ease forwards;
+}
+@keyframes voltiraExit{
+  to{opacity:0;transform:scale(1.03);visibility:hidden;pointer-events:none}
+}
+
+
+body.project-open{overflow:hidden}
+#projectEditor{position:fixed;inset:0;z-index:10000;background:#050505;color:#eee;display:none;flex-direction:column;font-family:inherit}
+#projectEditor.open{display:flex}
+.project-head{height:62px;display:flex;align-items:center;gap:10px;padding:7px 12px;background:#111820;border-bottom:1px solid rgba(255,255,255,.08)}
+.project-title{font-size:19px;font-weight:800;color:#ffd83d}.project-sub{font-size:11px;color:#9ba8b1}
+.project-head-actions{margin-right:auto;display:flex;gap:6px}.project-head-actions button,.project-tool button{border:0;border-radius:10px;background:#202a31;color:#fff;cursor:pointer}
+.project-head-actions button{width:40px;height:40px;font-size:20px}
+.project-stage{position:relative;flex:1;min-height:0;background:#000;overflow:hidden}
+#projectSvg{width:100%;height:100%;display:block;background-image:radial-gradient(rgba(255,215,0,.16) 1px,transparent 1px);background-size:24px 24px;touch-action:none}
+.project-wire{fill:none;stroke:#7c8a94;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+.project-wire.live{stroke:#ffe51b;filter:drop-shadow(0 0 5px #ffe51b)}
+.project-node{cursor:grab}.project-node:active{cursor:grabbing}
+.project-body{fill:#151b21;stroke:#d9e0e5;stroke-width:2}.project-body.live{stroke:#ffe51b;filter:drop-shadow(0 0 7px #ffe51b)}
+.project-metal{stroke:#c9d0d5;stroke-width:4;stroke-linecap:round;fill:none}
+.project-pin{fill:#ffe51b;stroke:#fff;stroke-width:1.5;cursor:pointer}
+.project-pin.selected{fill:#ff5b5b;filter:drop-shadow(0 0 6px #ff5b5b)}
+.project-mark{fill:#ffd83d;font-size:12px;font-weight:800}.project-value{fill:#d7dee2;font-size:10px}
+.project-wire-dot{fill:#ffe51b}
+.project-current-dot{fill:#ff4d4d;filter:drop-shadow(0 0 5px #ff4d4d)}
+.project-led-glow{fill:var(--led-color,#ff3030)!important;filter:drop-shadow(0 0 6px var(--led-color,#ff3030)) drop-shadow(0 0 16px var(--led-color,#ff3030))}
+.project-3d{filter:drop-shadow(10px 14px 10px rgba(0,0,0,.55));transform-style:preserve-3d}
+.project-stage.mode-3d{perspective:900px;background:radial-gradient(circle at 50% 30%,#17222b 0,#050505 62%)}
+.project-stage.mode-3d #projectSvg{transform-style:preserve-3d}
+.project-pan-hint{font-size:11px;color:#9ba8b1;margin-right:auto}
+.project-color{width:38px;height:36px;padding:2px;border:1px solid #4b5962;border-radius:9px;background:#202a31}
+.project-mode-active{background:#ffd83d!important;color:#111!important}
+
+.project-status{position:absolute;top:10px;left:10px;right:10px;display:flex;justify-content:space-between;gap:8px;pointer-events:none;z-index:3}
+.project-status span{background:rgba(10,15,20,.88);border:1px solid rgba(255,255,255,.1);padding:6px 9px;border-radius:9px;font-size:12px}
+.project-tools{display:flex;gap:7px;padding:8px;overflow-x:auto;background:#111820;border-top:1px solid rgba(255,255,255,.08)}
+.project-tool button{min-width:52px;padding:9px 10px;font-weight:800;white-space:nowrap}
+.project-tool button:hover{background:#303b43}
+.project-bottom{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:8px;background:#111820;border-top:1px solid rgba(255,255,255,.08)}
+.project-bottom button{border:0;border-radius:11px;padding:9px 13px;background:#202a31;color:#fff;font-weight:700}
+.project-bottom .run{background:#1d8f46}.project-bottom .stop{background:#c93636}
+.project-help{font-size:11px;color:#9ba8b1;padding:0 10px 7px;background:#111820}
+.component-picker{position:fixed;inset:0;background:rgba(0,0,0,.72);backdrop-filter:blur(8px);z-index:12000;display:none;align-items:center;justify-content:center;padding:12px}.component-picker.open{display:flex}.component-box{width:min(1050px,98vw);max-height:92vh;overflow:hidden;background:#07111a;border:1px solid rgba(75,210,255,.35);border-radius:22px;box-shadow:0 25px 100px #000;color:#fff;display:flex;flex-direction:column}.component-head{display:flex;align-items:center;gap:10px;padding:13px 15px;border-bottom:1px solid rgba(255,255,255,.08)}.component-head h2{margin:0;font-size:19px}.component-close{margin-right:auto;border:0;background:#17232d;color:#fff;border-radius:10px;width:40px;height:40px;font-size:22px;cursor:pointer}.component-search{display:flex;gap:8px;padding:10px;border-bottom:1px solid rgba(255,255,255,.08)}.component-search input{flex:1;min-width:0;background:#0d1a24;color:#fff;border:1px solid #29414e;border-radius:10px;padding:10px;font:inherit}.component-cats{display:flex;gap:7px;overflow:auto;padding:8px 10px}.component-cats button{border:1px solid #29414e;background:#0d1a24;color:#cbd7de;border-radius:18px;padding:7px 12px;white-space:nowrap;cursor:pointer}.component-cats button.active{background:#ffd83d;color:#111;border-color:#ffd83d}.component-list{overflow:auto;padding:10px;display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:10px}.component-item{display:grid;grid-template-columns:82px 1fr;gap:9px;align-items:center;background:linear-gradient(145deg,#0b1822,#071018);border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:9px;cursor:pointer;transition:.18s}.component-item:hover{transform:translateY(-2px);border-color:#49ddff;box-shadow:0 8px 28px rgba(0,190,255,.13)}.component-thumb{height:68px;border-radius:10px;background:radial-gradient(circle at 50% 35%,#20313d,#03070a 72%);border:1px solid rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;overflow:hidden}.component-thumb svg{width:100%;height:100%}.component-item b{font-size:13px}.component-item small{display:block;color:#91a4b0;font-size:10px;margin-top:4px;line-height:1.5}.component-add{font-size:10px;color:#5fe7ff;margin-top:5px}.project-plus{background:#ffd83d!important;color:#111!important;min-width:62px!important;font-size:20px!important}
+
+body.designer-open{overflow:hidden}
+#designer{position:fixed;inset:0;z-index:9999;background:#050505;color:#eee;display:none;flex-direction:column;font-family:inherit}
+#designer.open{display:flex}
+.designer-head{height:64px;display:flex;align-items:center;gap:12px;padding:8px 14px;background:#111820;border-bottom:1px solid rgba(255,255,255,.08)}
+.designer-title{font-size:20px;font-weight:800;color:#ffd83d}.designer-sub{font-size:12px;color:#9ba8b1;margin-top:2px}.designer-head-actions{margin-right:auto;display:flex;gap:7px}.icon-btn{width:42px;height:42px;border:0;border-radius:12px;background:#202a31;color:#fff;font-size:25px;cursor:pointer}.icon-btn:hover{background:#303b43}
+.wave-panel{height:150px;position:relative;background:#030303;border-bottom:1px solid rgba(255,255,255,.06);overflow:hidden}.wave-panel canvas{position:absolute;inset:0;width:100%;height:100%}.wave-labels{position:absolute;z-index:2;left:9px;top:17px;height:100%;display:flex;flex-direction:column;justify-content:space-between;padding-bottom:24px;font-size:14px;font-weight:700}.wave-time{position:absolute;right:18px;bottom:8px;background:#444;padding:5px 12px;border-radius:3px;color:#fff;font-size:13px}
+.designer-main{flex:1;min-height:0;position:relative;background:#000}.design-viewport{position:absolute;inset:0;transform-origin:center top;transition:transform .2s}.design-viewport svg{width:100%;height:100%;display:block;background:#000}.power-line{stroke:#e7ef21;stroke-width:2;filter:url(#glow)}.ground-line{stroke:#20e14b;stroke-width:2}.rail-label{fill:#fff;font-size:14px}.design-node .part-body{fill:#161b20;stroke:#d8dfe3;stroke-width:2}.design-node .part-metal{stroke:#c9d0d5;stroke-width:4;stroke-linecap:round}.design-node .part-pin{stroke:#8c969d;stroke-width:2}.design-node .part-mark{fill:#ffd83d;font-size:11px;font-weight:800}.design-node .part-value{fill:#d7dee2;font-size:9px}.design-node .node-sub{fill:#c8d0d4;font-size:9px;font-weight:500}.design-node .pin{fill:#ffe51b;stroke:#fff;stroke-width:1}.design-node{cursor:pointer}.design-node:hover .part-body{stroke:#ffe04a;filter:url(#glow)}
+.designer-info{position:absolute;left:12px;right:12px;top:12px;display:flex;gap:8px;justify-content:space-between;align-items:center;pointer-events:none}.design-chip{display:inline-block;background:rgba(20,28,35,.9);border:1px solid rgba(255,214,40,.35);padding:6px 10px;border-radius:8px;margin-left:5px;font-size:12px}.designer-info>div:last-child{background:rgba(15,20,24,.9);padding:7px 10px;border-radius:8px;color:#cfd7da;font-size:12px}
+.designer-tools{display:flex;gap:8px;padding:8px 12px;background:#111820;border-top:1px solid rgba(255,255,255,.07);overflow-x:auto}.designer-tools button{min-width:54px;height:44px;border:1px solid #46515a;border-radius:10px;background:#1c252c;color:#ffd83d;font-weight:800;font-size:17px}.designer-tools button:active{transform:scale(.96)}
+.designer-bottom{height:72px;position:relative;background:#070707;border-top:1px solid rgba(255,255,255,.06);display:flex;align-items:center;padding:8px 18px;gap:12px}.round{width:54px;height:54px;border:0;border-radius:50%;font-size:28px;color:#fff;font-weight:800}.round.reset{background:#f6aa20}.round.pause{background:#ff4747}.round.zoom{background:#ffd24b;color:#111;margin-right:auto}.back-chev{border:0;background:transparent;color:#fff;font-size:52px;line-height:1;transform:rotate(180deg)}#zoomValue{color:#9aa8b0;font-size:12px}
+@media(max-width:600px){.designer-title{font-size:17px}.designer-head{height:58px}.wave-panel{height:140px}.designer-bottom{height:68px}.round{width:50px;height:50px}.designer-info{top:8px;flex-direction:column;align-items:flex-start}.designer-info>div:last-child{font-size:11px}}
+<style>
+.smart-lab{position:absolute;right:12px;bottom:12px;width:min(390px,calc(100% - 24px));max-height:48%;overflow:auto;background:rgba(8,13,18,.95);border:1px solid rgba(70,220,255,.28);border-radius:16px;box-shadow:0 18px 55px rgba(0,0,0,.5);backdrop-filter:blur(10px);z-index:8;display:none}.smart-lab.open{display:block}.smart-lab-head{display:flex;align-items:center;gap:8px;padding:10px 12px;border-bottom:1px solid rgba(255,255,255,.08);font-weight:900}.smart-lab-head b{color:#52e6ff}.smart-lab-close{margin-right:auto;background:#202a31;color:#fff;border:0;border-radius:8px;padding:5px 9px}.smart-grid{display:grid;grid-template-columns:1fr 1fr;gap:7px;padding:9px}.smart-grid button{border:1px solid rgba(255,255,255,.1);background:#162029;color:#fff;border-radius:10px;padding:9px;cursor:pointer;font-weight:800}.smart-readout{padding:0 10px 10px}.smart-card{background:#0d151c;border:1px solid rgba(255,255,255,.08);border-radius:11px;padding:9px;margin-top:7px;font-size:12px}.smart-ok{color:#5df18b}.smart-warn{color:#ffd34e}.smart-bad{color:#ff7070}.smart-scope{width:100%;height:150px;background:#05080b;border-radius:10px;border:1px solid #26323a;display:block}.project-bom{position:absolute;left:12px;bottom:12px;width:min(310px,calc(100% - 24px));max-height:42%;overflow:auto;background:rgba(8,13,18,.95);border:1px solid rgba(255,215,61,.25);border-radius:15px;z-index:7;display:none}.project-bom.open{display:block}.project-bom h4{margin:0;padding:10px;border-bottom:1px solid rgba(255,255,255,.08)}.project-bom table{width:100%;font-size:11px;border-collapse:collapse}.project-bom td,.project-bom th{padding:5px;border-bottom:1px solid rgba(255,255,255,.06);text-align:right}
+
+.project-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px;margin-top:14px}
+.project-card{position:relative;display:grid;grid-template-columns:112px 1fr;gap:12px;align-items:center;padding:12px;border:1px solid rgba(75,210,255,.22);border-radius:16px;background:linear-gradient(145deg,#0a1622,#07101a);cursor:pointer;transition:.2s;overflow:hidden}
+.project-card:hover{transform:translateY(-3px);border-color:#38d9ff;box-shadow:0 8px 28px rgba(0,180,255,.14)}
+.project-card h3{margin:0 0 6px;font-size:16px}.project-card p{margin:0;color:#a9b7c3;font-size:12px;line-height:1.8}.project-thumb{height:86px;border-radius:12px;background:#02070b;border:1px solid rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;overflow:hidden}.project-thumb svg{width:100%;height:100%}.project-badge{grid-column:1/-1;font-size:10px;color:#69e8ff;opacity:.85}
+#sampleModal{position:fixed;inset:0;z-index:20000;background:rgba(0,0,0,.78);backdrop-filter:blur(8px);display:none;align-items:center;justify-content:center;padding:18px}
+#sampleModal.open{display:flex}.sample-box{width:min(920px,96vw);max-height:92vh;overflow:auto;background:#07111a;border:1px solid rgba(75,210,255,.3);border-radius:22px;box-shadow:0 20px 80px #000;color:#fff}.sample-head{display:flex;align-items:center;gap:10px;padding:14px 16px;border-bottom:1px solid rgba(255,255,255,.08)}.sample-head h2{margin:0;font-size:20px}.sample-close{margin-right:auto;border:0;background:#17232d;color:#fff;border-radius:10px;width:40px;height:40px;font-size:22px;cursor:pointer}.sample-canvas{padding:16px;background:#02070b}.sample-canvas svg{display:block;width:100%;height:auto;min-height:260px;background:radial-gradient(circle at center,#0d1b25,#02070b);border-radius:16px;border:1px solid rgba(255,255,255,.08)}.sample-info{padding:16px;display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px}.sample-info .info{background:#0c1822;border:1px solid rgba(255,255,255,.07);border-radius:12px;padding:11px}.sample-info b{display:block;color:#6eeaff;margin-bottom:5px}
+@media(max-width:600px){.project-card{grid-template-columns:92px 1fr}.project-thumb{height:78px}.sample-canvas svg{min-height:210px}}
+</style></style>
+</head>
+<body>
+
+<div class="voltira-landing" id="voltiraLanding">
+  <img src="IMAGE_BASE64_PLACEHOLDER" alt="صفحه ورودی ولتیرا">
+  <button class="enter-voltira" onclick="enterVoltira()">ENTER VOLTIRA <span>←</span></button>
+</div>
+<header><button id="thm" onclick="tg()" title="تغییر تم">🌓</button><h1>⚡ ولتیرا</h1><p>ابزار آموزشی رایگان برای هنرجویان و هنرآموزان رشته الکترونیک</p><div class="chips"><span>🧮 محاسبه‌گرها</span><span>📚 مرجع قطعات</span><span>🎓 آموزش تعاملی</span><span>🤖 دستیار هوشمند</span><span>🧠 آزمون</span></div></header>
+<nav id="nav"></nav>
+<main>
+<section id="t0">
+<div class="card"><h3>🎨 خوان رنگ مقاومت</h3><p class="help">تعداد نوار را انتخاب و رنگ‌ها را تنظیم کنید.</p><select id="rb" onchange="rcBuild()"><option value="4">۴ نواری</option><option value="5">۵ نواری</option></select><div id="rsel" class="row"></div><div class="res" id="rvis"></div><div class="out" id="rout"></div></div>
+<div class="card"><h3>قانون اهم</h3><p class="help">دو کمیت را وارد کنید و سومی را خالی بگذارید.</p><div class="row"><div><label>ولتاژ V</label><input id="ov" type="number" step="any"></div><div><label>جریان I</label><input id="oi" type="number" step="any"></div><div><label>مقاومت R</label><input id="or" type="number" step="any"></div></div><button class="b" onclick="ohm()">محاسبه</button><div class="out" id="oo"></div></div>
+<div class="card"><h3>تقسیم‌کننده ولتاژ</h3><p class="help">Vout = Vin × R2 / (R1 + R2)</p><div class="row"><div><label>Vin (ولت)</label><input id="dv" type="number" value="12"></div><div><label>R1 (اهم)</label><input id="d1" type="number" value="10000"></div><div><label>R2 (اهم)</label><input id="d2" type="number" value="4700"></div></div><button class="b" onclick="vdiv()">محاسبه</button><div class="out" id="do"></div></div>
+<div class="card"><h3>خازن: سری / موازی / بار</h3><p class="help">مقادیر خازن‌ها را به µF و با ویرگول جدا کنید.</p><div class="row"><div><label>خازن‌ها (µF)</label><input id="cv" value="10,22,47"></div><div><label>ولتاژ (V)</label><input id="cx" type="number" value="12"></div></div><button class="b" onclick="cap()">محاسبه</button><div class="out" id="co"></div></div>
+<div class="card"><h3>مقاومت LED</h3><p class="help">R = (Vs − Vf) / I</p><div class="row"><div><label>Vs (ولت)</label><input id="ls" type="number" value="12"></div><div><label>Vf (ولت)</label><input id="lf" type="number" value="2"></div><div><label>I (mA)</label><input id="li" type="number" value="20"></div></div><button class="b" onclick="led()">محاسبه</button><div class="out" id="lo"></div></div>
+<div class="card"><h3>فیلتر RC: فرکانس قطع</h3><p class="help">fc = 1 / (2π R C)</p><div class="row"><div><label>R (اهم)</label><input id="fr" type="number" value="10000"></div><div><label>C (نانوفاراد)</label><input id="fc" type="number" value="100"></div></div><button class="b" onclick="rcf()">محاسبه</button><div class="out" id="fo"></div></div>
+<div class="card"><h3>🔗 مقاومت‌های سری و موازی</h3><input id="rsin" value="100,220,470"><button class="b" onclick="rsp()">محاسبه</button><div class="out" id="rlo"></div></div>
+<div class="card"><h3>⏱️ تایمر 555 (آستابل)</h3><p class="help">f = 1.44 / ((R1 + 2R2) × C)</p><div class="row"><div><label>R1 (اهم)</label><input id="k1" type="number" value="1000"></div><div><label>R2 (اهم)</label><input id="k2" type="number" value="10000"></div><div><label>C (µF)</label><input id="kc" type="number" value="0.01"></div></div><button class="b" onclick="t555()">محاسبه</button><div class="out" id="ko"></div></div>
+<div class="card"><h3>🔥 توان و مقاومت مجاز</h3><p class="help">مقاومت را با توان مناسب انتخاب کنید.</p><div class="row"><div><label>ولتاژ دو سر (V)</label><input id="pv" type="number" value="12"></div><div><label>مقاومت (Ω)</label><input id="pr" type="number" value="220"></div></div><button class="b" onclick="pw()">محاسبه</button><div class="out" id="po"></div></div>
+</section>
+<section id="t1"><div class="card"><h3>🔍 جستجوی قطعه</h3><input id="q" placeholder="مثلاً 555 یا ترانزیستور" oninput="ref()"><div id="rl"></div></div><div class="card"><h3>سری‌های استاندارد مقاومت</h3><p class="help">E12 و E24</p><b>E12:</b><pre id="e12"></pre><b>E24:</b><pre id="e24"></pre></div><div class="card"><h3>انواع خازن</h3><div class="sc"><table id="ct"></table></div></div></section>
+<section id="t2"><div class="card"><h3>مدار سری و موازی</h3><div class="tags"><button onclick="sp('s')">سری</button><button onclick="sp('p')">موازی</button></div><div class="row"><div><label>باتری (V)</label><input id="sv" type="range" min="1" max="24" value="12" oninput="sp()"></div><div><label>R1 (اهم)</label><input id="s1" type="range" min="10" max="1000" value="100" oninput="sp()"></div><div><label>R2 (اهم)</label><input id="s2" type="range" min="10" max="1000" value="200" oninput="sp()"></div></div><svg id="spv" viewBox="0 0 300 130"></svg><div class="out" id="spo"></div></div><div class="card"><h3>AC در برابر DC</h3><p class="help">DC ولتاژی ثابت است؛ AC موج سینوسی دارد.</p><canvas id="cv1" width="600" height="220"></canvas><label>فرکانس AC</label><input type="range" id="fq" min="1" max="6" value="2"></div><div class="card"><h3>ترانزیستور به‌عنوان کلید</h3><p class="help">با جریان بیس کوچک، ترانزیستور NPN می‌تواند بار را روشن کند.</p><svg id="tv" viewBox="0 0 300 150"></svg><button class="b" onclick="tr()">وصل / قطع بیس</button><div class="out" id="to"></div></div><div class="card"><h3>تست جهت دیود</h3><p class="help">در مدل ساده، دیود در بایاس مستقیم هدایت می‌کند.</p><svg id="dvv" viewBox="0 0 300 110"></svg><button class="b" onclick="dio()">برعکس کردن باتری</button><div class="out" id="dro"></div></div></section>
+<section id="t3">
+<div class="card">
+<h3>📐 نمونه پروژه‌های الکترونیکی</h3>
+<p class="help">نمونه‌کارها را ببین. روی هر مدار بزن تا تصویر بزرگ و خود مدار را مشاهده کنی.</p>
+<div class="project-grid">
+<div class="project-card" tabindex="0" role="button" onclick="openProjectSample('led')" onkeydown="if(event.key==='Enter'||event.key===' ')openProjectSample('led')"><div class="project-thumb">led</div><div><h3>💡 چراغ LED با مقاومت</h3><p>مدار ساده روشن‌کردن LED با مقاومت محدودکننده.</p></div><div class="project-badge">● مبتدی · 12V · 220Ω · LED</div></div>
+<div class="project-card" tabindex="0" role="button" onclick="openProjectSample('blink')" onkeydown="if(event.key==='Enter'||event.key===' ')openProjectSample('blink')"><div class="project-thumb">blink</div><div><h3>✨ چراغ چشمک‌زن</h3><p>مدار چشمک‌زن LED با تایمر NE555.</p></div><div class="project-badge">● مبتدی · NE555 · R · C · LED</div></div>
+<div class="project-card" tabindex="0" role="button" onclick="openProjectSample('switch')" onkeydown="if(event.key==='Enter'||event.key===' ')openProjectSample('switch')"><div class="project-thumb">switch</div><div><h3>🔘 کلید و LED</h3><p>روشن و خاموش کردن LED با کلید فشاری.</p></div><div class="project-badge">● مبتدی · 9V · SW · 220Ω · LED</div></div>
+<div class="project-card" tabindex="0" role="button" onclick="openProjectSample('diode')" onkeydown="if(event.key==='Enter'||event.key===' ')openProjectSample('diode')"><div class="project-thumb">diode</div><div><h3>▶️ مدار دیود</h3><p>آشنایی با جهت جریان و یکسوسازی با دیود.</p></div><div class="project-badge">● مبتدی · 1N4007 · R · LED</div></div>
+<div class="project-card" tabindex="0" role="button" onclick="openProjectSample('buzzer')" onkeydown="if(event.key==='Enter'||event.key===' ')openProjectSample('buzzer')"><div class="project-thumb">buzzer</div><div><h3>🔊 بازر هشدار</h3><p>راه‌اندازی بازر با ترانزیستور NPN.</p></div><div class="project-badge">● مبتدی · 2N2222 · R · Buzzer</div></div>
+<div class="project-card" tabindex="0" role="button" onclick="openProjectSample('timer')" onkeydown="if(event.key==='Enter'||event.key===' ')openProjectSample('timer')"><div class="project-thumb">timer</div><div><h3>⏱️ تایمر 555</h3><p>مدار آستابل برای تولید پالس و چشمک‌زدن.</p></div><div class="project-badge">● متوسط · NE555 · R1 · R2 · C</div></div>
+<div class="project-card" tabindex="0" role="button" onclick="openProjectSample('temp')" onkeydown="if(event.key==='Enter'||event.key===' ')openProjectSample('temp')"><div class="project-thumb">temp</div><div><h3>🌡️ دماسنج LM35</h3><p>اندازه‌گیری دما با LM35 و نمایش مقدار خروجی.</p></div><div class="project-badge">● متوسط · LM35 · ADC · Display</div></div>
+<div class="project-card" tabindex="0" role="button" onclick="openProjectSample('motor')" onkeydown="if(event.key==='Enter'||event.key===' ')openProjectSample('motor')"><div class="project-thumb">motor</div><div><h3>⚙️ کنترل موتور DC</h3><p>کنترل روشن/خاموش موتور با ترانزیستور.</p></div><div class="project-badge">● متوسط · 2N2222 · Diode · Motor</div></div>
+<div class="project-card" tabindex="0" role="button" onclick="openProjectSample('reg')" onkeydown="if(event.key==='Enter'||event.key===' ')openProjectSample('reg')"><div class="project-thumb">reg</div><div><h3>🔋 رگولاتور 5 ولت</h3><p>تبدیل 12 ولت ورودی به خروجی پایدار 5 ولت.</p></div><div class="project-badge">● متوسط · 7805 · C1 · C2</div></div>
+<div class="project-card" tabindex="0" role="button" onclick="openProjectSample('rgb')" onkeydown="if(event.key==='Enter'||event.key===' ')openProjectSample('rgb')"><div class="project-thumb">rgb</div><div><h3>🌈 چراغ RGB</h3><p>کنترل سه رنگ LED RGB با مقاومت‌های مجزا.</p></div><div class="project-badge">● متوسط · RGB LED · 3×R</div></div>
+<div class="project-card" tabindex="0" role="button" onclick="openProjectSample('seven')" onkeydown="if(event.key==='Enter'||event.key===' ')openProjectSample('seven')"><div class="project-thumb">seven</div><div><h3>🔢 نمایشگر 7-Segment</h3><p>نمایش عدد با LEDهای داخلی نمایشگر.</p></div><div class="project-badge">● پیشرفته · 7-Segment · R · Driver</div></div>
+<div class="project-card" tabindex="0" role="button" onclick="openProjectSample('rf')" onkeydown="if(event.key==='Enter'||event.key===' ')openProjectSample('rf')"><div class="project-thumb">rf</div><div><h3>📡 فرستنده و گیرنده</h3><p>نمونه لینک بی‌سیم برای ارسال داده بین دو ماژول.</p></div><div class="project-badge">● پیشرفته · RF TX/RX · MCU</div></div>
+</div></div>
+</section>
+<section id="t4">
+  <div class="card">
+    <h3>📁 پروژه</h3>
+    <p class="help">محیط مستقل ساخت مدار: قطعات را اضافه کن، جابه‌جا کن، پایه‌ها را به هم سیم‌کشی کن و عبور جریان را به‌صورت زنده ببین.</p>
+    <button class="b" onclick="openProject()">🚀 ایجاد پروژه جدید</button>
+    <button class="b" onclick="loadDemoProject()">⚡ پروژه نمونه: منبع + مقاومت + LED</button>
+  </div>
+  <div class="card">
+    <h3>🔌 امکانات پروژه</h3>
+    <div class="out">• کشیدن قطعات با لمس یا ماوس<br>• برای سیم‌کشی، روی پایه اول و سپس پایه دوم بزن<br>• مسیرهای متصل زرد می‌شوند و نقطه‌های جریان روی سیم حرکت می‌کنند<br>• تغییر ولتاژ منبع و مقدار مقاومت، جریان مدار را تغییر می‌دهد</div>
+  </div>
+</section>
+<section id="t5"><div class="card"><h3>🤖 دستیار الکترونیک</h3><p class="help">سؤال خود را بپرسید. همچنین می‌توانید فایل TXT یا متن درس را وارد کنید.</p><div class="tags" id="sg"></div><div class="card" id="drop" style="margin:8px 0;background:var(--bg)"><b>📄 متن درسی</b><input type="file" id="pf" multiple accept=".txt,.md,text/plain"><div class="help" id="pst">هنوز متنی بارگذاری نشده است.</div><details><summary class="help">✍️ یا متن را اینجا بچسبانید</summary><textarea id="pt" rows="4" placeholder="متن درس را اینجا بچسبانید…"></textarea><button class="b" onclick="pasteDoc()">افزودن متن</button></details></div><div class="chat" id="ch"></div><div class="row"><input id="ai" placeholder="سؤال خود را بنویسید…" onkeydown="if(event.key==='Enter')ask()"><button class="b" onclick="ask()">بپرس</button></div><div class="row"><input id="gk" type="password" placeholder="کلید Gemini API (اختیاری)"><input id="gm" value="gemini-2.5-flash" placeholder="مدل Gemini"></div><button class="b" onclick="clearDocs()">پاک‌کردن متن‌ها</button></div></section>
+<section id="t6"><div class="card"><h3>🧠 آزمون کوتاه</h3><p class="help">۸ سؤال چهارگزینه‌ای برای سنجش یادگیری.</p><div id="qz"></div></div></section>
+<section id="t7"><div class="card"><h3>🧰 ابزارهای پیشرفته</h3><p class="help">۱۵ ماشین‌حساب دقیق؛ نتیجه هم‌زمان با تایپ به‌روز می‌شود.</p><input id="xs" placeholder="🔍 جستجو در ابزارها (مثلاً LM317، dB، آنتن)" oninput="xFilter()"></div><div id="xbox"></div></section>
+<section id="t8"><div class="card"><h3>⚡ شبیه‌ساز مدار (SPICE ساده)</h3><p class="help">تحلیل DC و گذرا با روش MNA. المان‌ها: R، C، V، I — گره زمین: 0. هر خط: <span class="ltr">نام گره۱ گره۲ مقدار</span> (پسوندها: k، M، u، n، p، m)</p><div class="tags" id="xpre"></div><textarea id="xnet" rows="7" class="ltr" spellcheck="false"></textarea><div class="row"><div><label>زمان شبیه‌سازی (ms) — ۰ = فقط DC</label><input id="xtt" type="number" value="50"></div><div><label>گام زمانی (µs)</label><input id="xdt" type="number" value="100"></div></div><button class="b" onclick="xSim()">▶ اجرا</button><div class="out" id="xso"></div><canvas id="xcv" width="700" height="260"></canvas></div></section>
+<section id="t9"><div class="card"><h3>🔗 ابزارهای بیرونی الکترونیک</h3><p class="help">لینک‌ها در تب جدید باز می‌شوند و به اینترنت نیاز دارند.</p><div id="xlk" class="row"></div></div></section>
+</main><div id="designer" aria-hidden="true">
+  <div class="designer-head">
+    <button class="icon-btn" onclick="closeDesigner()">‹</button>
+    <div><div id="designerTitle" class="designer-title">طراحی مدار</div><div id="designerSub" class="designer-sub">محیط طراحی ولتیرا</div></div>
+    <div class="designer-head-actions"><button class="icon-btn" onclick="resetDesign()">↻</button><button class="icon-btn">⚙</button><button class="icon-btn" onclick="closeDesigner()">✕</button></div>
+  </div>
+  <div class="wave-panel"><div class="wave-labels"><span>15 V</span><span>6.5 V</span><span>-2 V</span></div><canvas id="waveCanvas"></canvas><span class="wave-time">9 ms</span></div>
+  <div class="designer-main">
+    <div id="designViewport" class="design-viewport"><svg id="designerSvg" viewBox="0 0 800 460" preserveAspectRatio="none"></svg></div>
+    <div class="designer-info"><div id="designerParts"></div><div id="designerStatus">طراحی جدید آماده است.</div></div>
+  </div>
+  <div class="designer-tools"><button onclick="addQuickPart('مقاومت','R')">R</button><button onclick="addQuickPart('خازن','C')">C</button><button onclick="addQuickPart('دیود','D')">D</button><button onclick="addQuickPart('ترانزیستور','Q')">Q</button><button onclick="addQuickPart('اپ‌امپ','OP')">OP</button><button onclick="addQuickPart('منبع تغذیه','VCC')">V</button></div>
+  <div class="designer-bottom"><button class="round reset" onclick="resetDesign()">↻</button><button id="pauseDesign" class="round pause" onclick="toggleDesignPause()">Ⅱ</button><button class="round zoom" onclick="zoomDesign(.1)">＋</button><button class="back-chev" onclick="closeDesigner()">‹</button><span id="zoomValue">100%</span></div>
+</div>
+
+<div id="projectEditor" aria-hidden="true">
+  <div class="project-head">
+    <button class="icon-btn" onclick="closeProject()">‹</button>
+    <div><div class="project-title">📁 پروژه مدار</div><div class="project-sub">سیم‌کشی و شبیه‌سازی عبور جریان</div></div>
+    <div class="project-head-actions">
+      <button onclick="newProject()">↻</button>
+      <button onclick="loadDemoProject()">⚡</button>
+      <button onclick="closeProject()">✕</button>
+    </div>
+  </div>
+  <div class="project-stage">
+    <div class="project-status"><span id="projectVoltage">V = 12 V</span><span id="projectCurrent">I = 0 mA</span><span id="projectState">مدار باز</span></div>
+    <svg id="projectSvg" viewBox="0 0 1000 620" preserveAspectRatio="none" onpointerdown="startProjectPan(event)"></svg>
+  </div>
+  <div class="project-tools">
+    <div class="project-tool">
+      <button class="project-plus" onclick="openComponentPicker()" title="باز کردن کتابخانه قطعات">＋</button>
+    </div>
+  </div>
+  <div class="project-help"><span class="project-pan-hint">برای جابه‌جایی صفحه: فضای خالی را بکش · برای سیم‌کشی: دو پایه زرد را بزن · قطعه را برای جابه‌جایی بکش</span></div>
+  <div class="project-bottom">
+    <button class="run" onclick="toggleProjectRun()">▶ شبیه‌سازی</button>
+    <button class="stop" onclick="stopProjectRun()">■ توقف</button>
+    <button onclick="newProject()">🗑 پروژه جدید</button>
+    <label style="display:flex;align-items:center;gap:5px">🎨 <input id="projectLedColor" class="project-color" type="color" value="#ff3030" onchange="setProjectLedColor(this.value)"></label>
+    <button id="mode2d" class="project-mode-active" onclick="setProjectMode('2d')">2D</button><button id="mode3d" onclick="setProjectMode('3d')">3D</button>
+    <button onclick="zoomProject(-.1)">−</button><span id="projectZoom">100%</span><button onclick="zoomProject(.1)">＋</button><button onclick="toggleSmartLab()">🧠 آزمایشگاه هوشمند</button><button onclick="toggleBOM()">🧾 قطعات</button><button onclick="saveVoltiraProject()">💾 ذخیره</button><button onclick="loadVoltiraProject()">📂 بازیابی</button>
+  </div>
+  <div id="smartLab" class="smart-lab"><div class="smart-lab-head">🧠 <b>Voltira Smart Lab</b><span class="project-sub">تحلیل زنده مدار</span><button class="smart-lab-close" onclick="toggleSmartLab(false)">✕</button></div><div class="smart-grid"><button onclick="runCircuitAnalysis()">🔬 تحلیل مدار</button><button onclick="openScope()">📈 اسیلوسکوپ</button><button onclick="autoRouteProject()">🧵 مسیر پیشنهادی</button><button onclick="clearProjectWires()">✂️ پاک‌کردن سیم‌ها</button><button onclick="addProjectPart('V','منبع قابل تنظیم','5V')">🔋 منبع جدید</button><button onclick="exportProjectJSON()">📤 خروجی پروژه</button></div><div class="smart-readout" id="smartReadout"><div class="smart-card">مدار را بساز و «تحلیل مدار» را بزن.</div></div></div>
+  <div id="projectBOM" class="project-bom"><h4>🧾 فهرست قطعات پروژه</h4><div id="bomContent"></div></div>
+</div>
+
+<div id="componentPicker" class="component-picker" aria-hidden="true" onclick="if(event.target===this)closeComponentPicker()">
+  <div class="component-box">
+    <div class="component-head"><h2>＋ کتابخانه قطعات واقعی ولتیرا</h2><span class="project-sub">قطعه را انتخاب کن تا مستقیم وارد پروژه شود</span><button class="component-close" onclick="closeComponentPicker()">✕</button></div>
+    <div class="component-search"><input id="componentSearch" placeholder="جستجوی قطعه؛ مثل مقاومت، 1N4007، Arduino، LM358..." oninput="renderComponentPicker()"></div>
+    <div class="component-cats" id="componentCats"></div>
+    <div class="component-list" id="componentList"></div>
+  </div>
+</div>
+<div id="sampleModal" aria-hidden="true" onclick="if(event.target===this)closeProjectSample()"><div class="sample-box"><div class="sample-head"><h2 id="sampleTitle">مدار</h2><button class="sample-close" onclick="closeProjectSample()">✕</button></div><div class="sample-canvas" id="sampleCanvas"></div><div class="sample-info"><div class="info"><b>قطعات</b><span id="sampleParts"></span></div><div class="info"><b>سطح</b><span id="sampleLevel"></span></div><div class="info"><b>توضیح</b><span id="sampleDesc"></span></div></div></div></div>
+<footer>ساخته‌شده برای هنرستان‌های فنی و حرفه‌ای · مناسب موبایل و اینترنت کند</footer>
+<script>
+const $=id=>document.getElementById(id),N=id=>parseFloat($(id).value);const fa=n=>Number(n.toPrecision(4)).toLocaleString('fa-IR',{maximumFractionDigits:6});function eng(v,u){if(!Number.isFinite(v))return 'نامعتبر';const s=[[1e6,'M'],[1e3,'k'],[1,''],[1e-3,'m'],[1e-6,'µ'],[1e-9,'n']];for(const[k,p]of s)if(Math.abs(v)>=k)return fa(v/k)+' '+p+u;return fa(v)+' '+u}
+const PROJECT_SAMPLES={
+led:{title:'چراغ LED با مقاومت',level:'مبتدی',parts:'منبع 12V، مقاومت 220Ω، LED',desc:'مدار پایه برای یادگیری محدودکردن جریان LED.',svg:`<svg viewBox="0 0 760 300" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="#dce7ef" stroke-width="4" stroke-linecap="round"><path d="M70 150H180"/><path d="M260 150H390"/><path d="M470 150H650"/><path d="M70 150V245H650V150"/></g><g fill="#1d2933" stroke="#ffd83d" stroke-width="3"><rect x="30" y="110" width="70" height="80" rx="8"/><rect x="180" y="130" width="80" height="40" rx="5"/></g><text x="65" y="157" text-anchor="middle" fill="#fff" font-size="22">12V</text><path d="M390 150l20-20 20 40 20-40 20 40 20-20" fill="none" stroke="#d9a441" stroke-width="7"/><g transform="translate(470 115)"><path d="M0 35h35" stroke="#ddd" stroke-width="4"/><path d="M35 10l28 25-28 25z" fill="#e33" stroke="#fff" stroke-width="3"/><path d="M63 10v50" stroke="#fff" stroke-width="4"/><path d="M63 35h55" stroke="#ddd" stroke-width="4"/></g><text x="220" y="122" fill="#69e8ff" font-size="18">220Ω</text><text x="535" y="95" fill="#ff4d5a" font-size="18">LED</text></svg>`},
+blink:{title:'چراغ چشمک‌زن',level:'مبتدی',parts:'NE555، R1، R2، C، LED',desc:'تولید پالس دوره‌ای با تایمر 555 برای چشمک‌زدن LED.',svg:`<svg viewBox="0 0 760 300" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="#dce7ef" stroke-width="4" stroke-linecap="round"><path d="M70 70H210M70 230H210M550 70H680M550 230H680"/><path d="M210 70V110M210 190V230M550 70V110M550 190V230"/><path d="M550 150H650"/></g><rect x="270" y="80" width="280" height="140" rx="18" fill="#151f28" stroke="#4ee7ff" stroke-width="4"/><text x="410" y="160" text-anchor="middle" fill="#fff" font-size="42" font-weight="700">555</text><g stroke="#d9a441" stroke-width="6" fill="none"><path d="M210 110h50l15-20 15 40 15-40 15 40 15-20h35"/><path d="M210 190h80"/></g><circle cx="650" cy="150" r="22" fill="#ff3344" stroke="#fff" stroke-width="4"/><text x="650" y="95" text-anchor="middle" fill="#ff6872" font-size="18">LED</text><text x="245" y="65" fill="#69e8ff" font-size="17">R1 / R2 / C</text></svg>`},
+switch:{title:'کلید و LED',level:'مبتدی',parts:'باتری 9V، کلید، مقاومت، LED',desc:'مدار روشن و خاموش‌کردن LED با یک کلید.',svg:`<svg viewBox="0 0 760 300" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="#dce7ef" stroke-width="4"><path d="M70 80H220M300 80H390M470 80H680V220H70V80"/><path d="M220 80l80-45" stroke="#ffd83d"/></g><rect x="30" y="50" width="70" height="60" rx="8" fill="#202b33" stroke="#ffd83d" stroke-width="3"/><text x="65" y="88" text-anchor="middle" fill="#fff" font-size="18">9V</text><text x="255" y="35" fill="#69e8ff" font-size="18">SW</text><path d="M390 80l18-18 18 36 18-36 18 36 18-18" fill="none" stroke="#d9a441" stroke-width="6"/><path d="M500 45l30 35-30 35z" fill="#e33" stroke="#fff" stroke-width="3"/><path d="M530 45v70" stroke="#fff" stroke-width="4"/><circle cx="610" cy="80" r="23" fill="#ff3030" stroke="#fff" stroke-width="4"/><text x="610" y="130" text-anchor="middle" fill="#ff6872" font-size="17">LED</text></svg>`},
+diode:{title:'مدار دیود',level:'مبتدی',parts:'1N4007، مقاومت، منبع DC',desc:'آشنایی با یکسوسازی و جهت هدایت دیود.',svg:`<svg viewBox="0 0 760 300" xmlns="http://www.w3.org/2000/svg"><path d="M70 150H250M350 150H680M70 150V240H680V150" stroke="#dce7ef" stroke-width="4" fill="none"/><path d="M250 150l35-35v70z" fill="#35d9ff" stroke="#fff" stroke-width="3"/><path d="M320 110v80" stroke="#fff" stroke-width="5"/><path d="M250 150h70" stroke="#fff" stroke-width="3"/><path d="M390 150l18-18 18 36 18-36 18 36 18-18" stroke="#d9a441" stroke-width="6" fill="none"/><text x="280" y="90" fill="#69e8ff" font-size="18">1N4007</text><text x="470" y="130" fill="#ffd83d" font-size="17">R</text></svg>`},
+buzzer:{title:'بازر هشدار',level:'مبتدی',parts:'2N2222، مقاومت، بازر',desc:'راه‌اندازی یک بازر با ترانزیستور NPN.',svg:`<svg viewBox="0 0 760 300" xmlns="http://www.w3.org/2000/svg"><path d="M70 70H230M70 230H230M530 70H680V230H530M230 70V115M230 185V230" stroke="#dce7ef" stroke-width="4" fill="none"/><circle cx="610" cy="150" r="55" fill="#202a32" stroke="#4ee7ff" stroke-width="4"/><path d="M575 125q55 25 0 50M590 112q70 38 0 76" fill="none" stroke="#69e8ff" stroke-width="5"/><path d="M230 115h90l20 20 20-40 20 40 20-20h70" stroke="#d9a441" stroke-width="6" fill="none"/><path d="M390 135l35 15-35 15z" fill="#bbb"/><path d="M425 120v60" stroke="#fff" stroke-width="5"/><text x="600" y="245" text-anchor="middle" fill="#69e8ff" font-size="18">BUZZER</text><text x="340" y="105" fill="#ffd83d" font-size="18">2N2222</text></svg>`},
+timer:{title:'تایمر 555',level:'متوسط',parts:'NE555، R1، R2، C',desc:'مدار آستابل برای تولید موج مربعی.',svg:`<svg viewBox="0 0 760 300" xmlns="http://www.w3.org/2000/svg"><rect x="250" y="70" width="260" height="160" rx="16" fill="#17232d" stroke="#4ee7ff" stroke-width="4"/><text x="380" y="160" text-anchor="middle" fill="#fff" font-size="46">NE555</text><path d="M70 90H250M70 210H250M510 90H690M510 210H690" stroke="#dce7ef" stroke-width="4"/><path d="M140 90v60h70M140 210v-60h70" stroke="#d9a441" stroke-width="6" fill="none"/><path d="M600 90v120M600 90h40M600 210h40" stroke="#d9a441" stroke-width="6"/><text x="145" y="55" fill="#69e8ff" font-size="18">R1</text><text x="205" y="245" fill="#69e8ff" font-size="18">R2 + C</text><path d="M560 150h110" stroke="#69e8ff" stroke-width="3"/><path d="M650 140v20l10-10z" fill="#69e8ff"/></svg>`},
+temp:{title:'دماسنج LM35',level:'متوسط',parts:'LM35، ADC، نمایشگر',desc:'اندازه‌گیری دما با سنسور LM35.',svg:`<svg viewBox="0 0 760 300" xmlns="http://www.w3.org/2000/svg"><rect x="70" y="95" width="160" height="110" rx="14" fill="#17232d" stroke="#4ee7ff" stroke-width="4"/><text x="150" y="160" text-anchor="middle" fill="#fff" font-size="30">LM35</text><path d="M230 150H360" stroke="#dce7ef" stroke-width="4"/><rect x="360" y="75" width="150" height="150" rx="14" fill="#111a22" stroke="#69e8ff" stroke-width="4"/><text x="435" y="165" text-anchor="middle" fill="#8fffd5" font-size="32">ADC</text><path d="M510 150H610" stroke="#dce7ef" stroke-width="4"/><rect x="610" y="95" width="90" height="110" rx="8" fill="#0b151c" stroke="#ffd83d" stroke-width="3"/><text x="655" y="160" text-anchor="middle" fill="#69e8ff" font-size="25">25°C</text></svg>`},
+motor:{title:'کنترل موتور DC',level:'متوسط',parts:'2N2222، دیود، موتور DC',desc:'کنترل یک موتور DC با ترانزیستور و دیود هرزگرد.',svg:`<svg viewBox="0 0 760 300" xmlns="http://www.w3.org/2000/svg"><path d="M70 70H220M70 230H220M220 70V120M220 180V230M500 70H680V230H500" stroke="#dce7ef" stroke-width="4" fill="none"/><path d="M220 120h80l20-25 20 50 20-50 20 50 20-25h50" stroke="#d9a441" stroke-width="6" fill="none"/><circle cx="600" cy="150" r="62" fill="#17232d" stroke="#4ee7ff" stroke-width="4"/><text x="600" y="160" text-anchor="middle" fill="#fff" font-size="24">M</text><path d="M600 95v-30M600 235v30" stroke="#69e8ff" stroke-width="5"/><text x="300" y="75" fill="#69e8ff" font-size="18">2N2222 + Flyback Diode</text></svg>`},
+reg:{title:'رگولاتور 5 ولت',level:'متوسط',parts:'7805، C1، C2',desc:'تبدیل ورودی 12V به خروجی پایدار 5V.',svg:`<svg viewBox="0 0 760 300" xmlns="http://www.w3.org/2000/svg"><path d="M60 150H210M390 150H700" stroke="#dce7ef" stroke-width="4"/><rect x="210" y="85" width="180" height="130" rx="12" fill="#17232d" stroke="#ffd83d" stroke-width="4"/><text x="300" y="160" text-anchor="middle" fill="#fff" font-size="34">7805</text><path d="M170 150v-70M170 220v-70M450 150v-70M450 220v-70" stroke="#69e8ff" stroke-width="4"/><path d="M150 80h40M150 220h40M430 80h40M430 220h40" stroke="#fff" stroke-width="4"/><text x="95" y="130" fill="#69e8ff" font-size="20">12V IN</text><text x="555" y="130" fill="#69e8ff" font-size="20">5V OUT</text><text x="135" y="55" fill="#ffd83d" font-size="16">C1</text><text x="415" y="55" fill="#ffd83d" font-size="16">C2</text></svg>`},
+rgb:{title:'چراغ RGB',level:'متوسط',parts:'RGB LED، سه مقاومت',desc:'کنترل سه کانال رنگی LED RGB.',svg:`<svg viewBox="0 0 760 300" xmlns="http://www.w3.org/2000/svg"><circle cx="600" cy="150" r="65" fill="#15202a" stroke="#fff" stroke-width="4"/><circle cx="580" cy="130" r="22" fill="#ff3040" opacity=".9"/><circle cx="620" cy="130" r="22" fill="#31e26a" opacity=".9"/><circle cx="600" cy="175" r="22" fill="#3b8cff" opacity=".9"/><path d="M80 80H240M80 150H240M80 220H240M350 80H530M350 150H530M350 220H530" stroke="#dce7ef" stroke-width="4"/><path d="M240 80h40l15-18 15 36 15-36 15 36 15-18h20M240 150h40l15-18 15 36 15-36 15 36 15-18h20M240 220h40l15-18 15 36 15-36 15 36 15-18h20" stroke="#d9a441" stroke-width="6" fill="none"/><text x="570" y="270" fill="#69e8ff" font-size="18">RGB LED</text></svg>`},
+seven:{title:'نمایشگر 7-Segment',level:'پیشرفته',parts:'7-Segment، مقاومت، درایور',desc:'نمایش اعداد با سگمنت‌های LED.',svg:`<svg viewBox="0 0 760 300" xmlns="http://www.w3.org/2000/svg"><rect x="275" y="45" width="210" height="210" rx="18" fill="#0d171e" stroke="#4ee7ff" stroke-width="4"/><g stroke="#ff3344" stroke-width="13" stroke-linecap="round"><path d="M330 75h100"/><path d="M330 150h100"/><path d="M330 225h100"/><path d="M325 85v50"/><path d="M435 85v50"/><path d="M325 165v50"/><path d="M435 165v50"/></g><path d="M70 90H275M70 210H275M485 90H690M485 210H690" stroke="#dce7ef" stroke-width="4"/><text x="380" y="280" text-anchor="middle" fill="#69e8ff" font-size="18">7-SEGMENT</text></svg>`},
+rf:{title:'فرستنده و گیرنده',level:'پیشرفته',parts:'RF TX/RX، میکروکنترلر',desc:'ارسال و دریافت داده بین دو ماژول بی‌سیم.',svg:`<svg viewBox="0 0 760 300" xmlns="http://www.w3.org/2000/svg"><rect x="70" y="85" width="190" height="130" rx="16" fill="#17232d" stroke="#4ee7ff" stroke-width="4"/><rect x="500" y="85" width="190" height="130" rx="16" fill="#17232d" stroke="#4ee7ff" stroke-width="4"/><text x="165" y="160" text-anchor="middle" fill="#fff" font-size="30">TX</text><text x="595" y="160" text-anchor="middle" fill="#fff" font-size="30">RX</text><path d="M285 150h190" stroke="#69e8ff" stroke-width="4" stroke-dasharray="12 12"/><path d="M330 125q50-45 100 0M350 150q30-25 60 0M370 175q10-10 20 0" fill="none" stroke="#69e8ff" stroke-width="4"/><text x="380" y="240" text-anchor="middle" fill="#69e8ff" font-size="18">Wireless Link</text></svg>`}
+};
+function openProjectSample(key){const p=PROJECT_SAMPLES[key];if(!p)return;$('sampleTitle').textContent=p.title;$('sampleCanvas').innerHTML=p.svg;$('sampleParts').textContent=p.parts;$('sampleLevel').textContent=p.level;$('sampleDesc').textContent=p.desc;$('sampleModal').classList.add('open');$('sampleModal').setAttribute('aria-hidden','false');document.body.style.overflow='hidden'}
+function closeProjectSample(){$('sampleModal').classList.remove('open');$('sampleModal').setAttribute('aria-hidden','true');document.body.style.overflow=''}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeProjectSample()});
+const tabs=['🧮 محاسبات','📚 مرجع قطعات','🎓 آموزش تعاملی','📐 نمونه پروژه‌ها','📁 پروژه','🤖 دستیار','🧠 آزمون','🧰 ابزارهای پیشرفته','⚡ شبیه‌ساز','🔗 لینک‌ها'];
+tabs.forEach((t,i)=>{const b=document.createElement('button');b.textContent=t;b.onclick=()=>show(i);$('nav').appendChild(b)});
+function show(i){[...$('nav').children].forEach((b,j)=>b.classList.toggle('on',i===j));for(let j=0;j<10;j++)$('t'+j).classList.toggle('on',i===j)}show(0);
+const C=[['مشکی','#000',0,1],['قهوه‌ای','#7b3f00',1,10],['قرمز','#e03131',2,100],['نارنجی','#f76707',3,1e3],['زرد','#fcc419',4,1e4],['سبز','#2f9e44',5,1e5],['آبی','#1971c2',6,1e6],['بنفش','#7048e8',7,1e7],['خاکستری','#868e96',8,1e8],['سفید','#f1f3f5',9,1e9],['طلایی','#c9a227',null,.1],['نقره‌ای','#c0c0c0',null,.01]];const TOL={1:1,2:2,5:.5,6:.25,7:.1,10:5,11:10};
+function rcBuild(){const n=+$('rb').value,L=n===4?['رقم ۱','رقم ۲','ضریب','تلرانس']:['رقم ۱','رقم ۲','رقم ۳','ضریب','تلرانس'];$('rsel').innerHTML=L.map((l,i)=>{const last=i===n-1,mul=i===n-2,opts=C.map((c,k)=>({c,k})).filter(({k})=>last?TOL[k]!==undefined:mul||k<10);return `<div><label>${l}</label><select onchange="rcCalc()">${opts.map(({c,k})=>`<option value="${k}" ${(last&&k==10)||(i===0&&k==1)||(i===1&&k===0&&n===4)||(mul&&k===2)?'selected':''}>${c[0]}</option>`).join('')}</select></div>`}).join('');rcCalc()}
+function rcCalc(){const n=+$('rb').value,v=[...$('rsel').querySelectorAll('select')].map(s=>+s.value),d=v.slice(0,n-2).reduce((a,x)=>a*10+x,0),m=C[v[n-2]][3],r=d*m,t=TOL[v[n-1]];$('rvis').innerHTML=v.map((k,i)=>`<i style="background:${C[k][1]};margin-inline:${i===n-1?'12px':'0'}"></i>`).join('');$('rout').innerHTML=`مقدار: <b>${eng(r,'Ω')}</b> با تلرانس ±${fa(t)}٪<br>محدوده: ${eng(r*(1-t/100),'Ω')} تا ${eng(r*(1+t/100),'Ω')}`}
+function ohm(){let V=N('ov'),I=N('oi'),R=N('or'),o=$('oo');const k=[V,I,R].filter(x=>!Number.isNaN(x)).length;if(k!==2){o.textContent='دقیقاً دو مقدار را وارد کنید.';return}if(Number.isNaN(V))o.innerHTML=`V = I×R = <b>${eng(I*R,'V')}</b>`;else if(Number.isNaN(I))o.innerHTML=R?`I = V/R = <b>${eng(V/R,'A')}</b>`:'R نمی‌تواند صفر باشد';else o.innerHTML=I?`R = V/I = <b>${eng(V/I,'Ω')}</b>`:'I نمی‌تواند صفر باشد'}
+function vdiv(){const V=N('dv'),a=N('d1'),b=N('d2');if(!(a+b))return;$('do').innerHTML=`Vout = <b>${eng(V*b/(a+b),'V')}</b><br>جریان: ${eng(V/(a+b),'A')}`}
+function cap(){const c=$('cv').value.split(/[,،]/).map(Number).filter(x=>x>0),V=N('cx');if(!c.length){$('co').textContent='مقدار معتبر وارد کنید.';return}const par=c.reduce((a,b)=>a+b,0),ser=1/c.reduce((a,b)=>a+1/b,0);$('co').innerHTML=`موازی: <b>${eng(par*1e-6,'F')}</b><br>سری: <b>${eng(ser*1e-6,'F')}</b><br>بار: ${eng(par*1e-6*V,'C')}<br>انرژی: ${eng(.5*par*1e-6*V*V,'J')}`}
+function led(){const s=N('ls'),f=N('lf'),i=N('li')/1e3;if(!(i>0)||s<=f){$('lo').textContent='ولتاژ منبع باید بیشتر و جریان مثبت باشد.';return}const r=(s-f)/i;const ok=[...new Set([10,12,15,18,22,27,33,39,47,56,68,82].flatMap(x=>[1,10,100,1e3,1e4].map(m=>x*m)))].sort((a,b)=>a-b).find(x=>x>=r);$('lo').innerHTML=`R = <b>${eng(r,'Ω')}</b><br>مقدار استاندارد E12 بالاتر: <b>${eng(ok||r,'Ω')}</b><br>توان: ${eng((s-f)*i,'W')}`}
+function rcf(){const r=N('fr'),c=N('fc')*1e-9;if(!(r>0&&c>0))return;$('fo').innerHTML=`fc = <b>${eng(1/(2*Math.PI*r*c),'Hz')}</b><br>τ = ${eng(r*c,'s')}`}
+function rsp(){const a=$('rsin').value.split(/[,،]/).map(Number).filter(x=>x>0);if(!a.length){$('rlo').textContent='مقدار معتبر وارد کنید.';return}$('rlo').innerHTML=`سری: <b>${eng(a.reduce((x,y)=>x+y,0),'Ω')}</b><br>موازی: <b>${eng(1/a.reduce((x,y)=>x+1/y,0),'Ω')}</b>`}
+function t555(){const r1=N('k1'),r2=N('k2'),c=N('kc')*1e-6;if(!(r1>0&&r2>0&&c>0)){$('ko').textContent='همه مقادیر باید مثبت باشند.';return}const T=.693*(r1+2*r2)*c;$('ko').innerHTML=`فرکانس: <b>${eng(1/T,'Hz')}</b> · دوره: ${eng(T,'s')}<br>زمان روشن: ${eng(.693*(r1+r2)*c,'s')} · خاموش: ${eng(.693*r2*c,'s')}<br>duty: <b>${fa((r1+r2)/(r1+2*r2)*100)}%</b>`}
+function pw(){const v=N('pv'),r=N('pr');if(!(r>0)){$('po').textContent='مقاومت باید مثبت باشد.';return}const p=v*v/r,st=[.125,.25,.5,1,2,5,10].find(x=>x>=p*2)||'بیش از ۱۰';$('po').innerHTML=`جریان: ${eng(v/r,'A')}<br>توان تلف‌شده: <b>${eng(p,'W')}</b><br>توان پیشنهادی مقاومت: <b>${st} وات</b> یا بیشتر`}
+const D=[['NE555','تایمر معروف آستابل و مونوستابل','آی‌سی تایمر'],['2N2222','ترانزیستور NPN کوچک‌سیگنال','ترانزیستور'],['BC547','ترانزیستور NPN عمومی','ترانزیستور'],['1N4148','دیود سیگنال سریع','دیود'],['1N4007','دیود یکسوساز عمومی','دیود'],['LM358','تقویت‌کننده عملیاتی دوکاناله','آپ‌امپ'],['7805','رگولاتور خطی ۵ ولت','رگولاتور'],['IRFZ44N','ماسفت کانال N توان','MOSFET']];function ref(){const q=$('q').value.trim().toLowerCase(),hits=D.filter(x=>x.join(' ').toLowerCase().includes(q));$('rl').innerHTML=hits.map(x=>`<div class="out"><b>${x[0]}</b> — ${x[1]}<br><small>${x[2]}</small></div>`).join('')||(q?'موردی پیدا نشد.':'')}
+$('e12').textContent='10 12 15 18 22 27 33 39 47 56 68 82';$('e24').textContent='10 11 12 13 15 16 18 20 22 24 27 30 33 36 39 43 47 51 56 62 68 75 82 91';$('ct').innerHTML='<tr><th>نوع</th><th>ویژگی</th><th>کاربرد</th></tr>'+[['سرامیکی','کوچک و سریع','بای‌پس و فرکانس بالا'],['الکترولیتی','ظرفیت بالا، قطب‌دار','تغذیه و صافی'],['فیلمی','پایدار و دقیق','تایمینگ و صوت'],['تانantalum','کم‌حجم و قطب‌دار','مدارهای DC']].map(r=>'<tr>'+r.map(c=>`<td>${c}</td>`).join('')+'</tr>').join('');
+let spm='s';function sp(m){if(m)spm=m;const V=N('sv'),a=N('s1'),b=N('s2'),s=spm==='s',R=s?a+b:a*b/(a+b),I=V/R;$('spo').innerHTML=`حالت <b>${s?'سری':'موازی'}</b><br>مقاومت معادل: ${eng(R,'Ω')} · جریان کل: ${eng(I,'A')}`;$('spv').innerHTML=`<line x1="25" y1="65" x2="75" y2="65" stroke="currentColor"/><rect x="75" y="48" width="55" height="34" fill="none" stroke="currentColor"/><text x="102" y="70" text-anchor="middle" fill="currentColor">R1</text><line x1="130" y1="65" x2="175" y2="65" stroke="currentColor"/><rect x="175" y="48" width="55" height="34" fill="none" stroke="currentColor"/><text x="202" y="70" text-anchor="middle" fill="currentColor">R2</text><line x1="230" y1="65" x2="275" y2="65" stroke="currentColor"/>`}
+let trOn=false,dioRev=false;function tr(){trOn=!trOn;$('to').textContent=trOn?'✅ بیس فعال است؛ LED روشن می‌شود.':'⛔ بیس قطع است؛ LED خاموش است.';$('tv').innerHTML=`<circle cx="150" cy="75" r="32" fill="none" stroke="currentColor"/><text x="150" y="80" text-anchor="middle" fill="currentColor">NPN</text>`}function dio(){dioRev=!dioRev;$('dro').textContent=dioRev?'⛔ بایاس معکوس؛ جریان عبور نمی‌کند.':'✅ بایاس مستقیم؛ جریان عبور می‌کند.';$('dvv').innerHTML=`<line x1="55" y1="55" x2="125" y2="55" stroke="currentColor" stroke-width="4"/><polygon points="125,35 125,75 160,55" fill="none" stroke="currentColor"/><line x1="160" y1="35" x2="160" y2="75" stroke="currentColor" stroke-width="4"/><line x1="160" y1="55" x2="245" y2="55" stroke="currentColor" stroke-width="4"/>`}
+const ctx=$('cv1').getContext('2d');function draw(){const c=$('cv1'),w=c.width,h=c.height,cs=getComputedStyle(document.documentElement);ctx.clearRect(0,0,w,h);ctx.strokeStyle=cs.getPropertyValue('--bd');ctx.beginPath();ctx.moveTo(0,h/2);ctx.lineTo(w,h/2);ctx.stroke();ctx.strokeStyle=cs.getPropertyValue('--ac');ctx.lineWidth=3;ctx.beginPath();for(let x=0;x<w;x++){const y=h/2-55*Math.sin(x/45*Number($('fq').value));if(x===0)ctx.moveTo(x,y);else ctx.lineTo(x,y)}ctx.stroke();requestAnimationFrame(draw)}requestAnimationFrame(draw);
+let CH=[];function norm(t){return t.replace(/ي/g,'ی').replace(/ك/g,'ک').replace(/[۰-۹]/g,d=>'۰۱۲۳۴۵۶۷۸۹'.indexOf(d)).replace(/[\u200c\u064b-\u065f]/g,' ').toLowerCase()}function addText(name,text){text=text.replace(/\s+/g,' ').trim();for(let i=0;i<text.length;i+=600){const c=text.slice(i,i+700);if(c.length>40)CH.push({name,c,t:norm(c).split(/[^\p{L}\p{N}]+/u).filter(w=>w.length>1)})}}function search(q,k=4){const qt=[...new Set(norm(q).split(/[^\p{L}\p{N}]+/u).filter(w=>w.length>1))];return CH.map(x=>({x,sc:qt.reduce((s,w)=>s+(x.t.includes(w)?1:0),0)})).filter(x=>x.sc).sort((a,b)=>b.sc-a.sc).slice(0,k)}function msg(t,c){const d=document.createElement('div');d.className='m '+c;d.textContent=t;$('ch').appendChild(d);$('ch').scrollTop=1e5;return d}function ask(){const q=$('ai').value.trim();if(!q)return;msg(q,'u');$('ai').value='';const h=search(q);if(h.length){msg('مرتبط‌ترین بخش‌های متن:','a');h.forEach((z,i)=>msg(`[${i+1}] ${z.x.name}: ${z.x.c}`,'a'));return}const l=q.toLowerCase(),km=[['قانون اهم چیست؟','V=I×R و سه کمیت ولتاژ، جریان و مقاومت را به هم مرتبط می‌کند.'],['فرق سری و موازی چیست؟','در سری جریان یکسان است؛ در موازی ولتاژ دو سر شاخه‌ها یکسان است.'],['مقاومت LED چطور حساب می‌شود؟','R=(Vs−Vf)/I. جریان را به آمپر تبدیل کنید.'],['ترانزیستور چه می‌کند؟','ترانزیستور می‌تواند مانند کلید یا تقویت‌کننده کار کند.']];const z=km.find(x=>l.includes(x[0].split(' ')[0]));msg(z?z[1]:'پاسخ آماده‌ای برای این سؤال ندارم. یک متن آموزشی وارد کنید یا کلید Gemini را فعال کنید.','a')}
+async function loadFiles(files){for(const f of files){if(!/\.(txt|md)$/i.test(f.name))continue;addText(f.name,await f.text())} $('pst').textContent=CH.length?`✅ متن‌ها بارگذاری شدند؛ ${CH.length} تکه آماده است.`:'متنی بارگذاری نشد.'}function pasteDoc(){const t=$('pt').value.trim();if(!t)return;addText('متن چسبانده‌شده',t);$('pt').value='';$('pst').textContent=`✅ ${CH.length} تکه‌ی متن آماده است.`}function clearDocs(){CH=[];$('pst').textContent='متن‌ها پاک شدند.'} $('pf').addEventListener('change',e=>loadFiles(e.target.files));
+const QZ=[['ولتاژ ۱۰ ولت و مقاومت ۵ اهم؛ جریان؟',['۰٫۵ آمپر','۲ آمپر','۵۰ آمپر','۱۵ آمپر'],1,'I=V/R=2A'],['در مدار سری کدام کمیت یکسان است؟',['ولتاژ','جریان','توان','مقاومت'],1,'جریان یکسان است.'],['دو مقاومت ۱۰۰ اهم موازی؟',['۲۰۰','۱۰۰','۵۰','۲۵'],2,'۵۰ اهم.'],['نوار قهوه‌ای-مشکی-قرمز-طلایی؟',['۱۰۲ اهم','۱ کیلو اهم','۱۰ کیلو اهم','۱۰۰ اهم'],1,'۱۰۰۰ اهم.'],['دیود در بایاس مستقیم؟',['قطع','هدایت','دوبرابر','تبدیل به خازن'],1,'هدایت می‌کند.'],['فرمول توان الکتریکی؟',['P=VI','P=V/I','P=R/I','P=I/R'],0,'P=VI'],['واحد مقاومت؟',['ولت','آمپر','اهم','وات'],2,'اهم.'],['خازن در مدار DC پس از شارژ ایده‌آل؟',['اتصال کوتاه','مدار باز','مقاومت صفر','مولد'],1,'مدار باز.']];let qi=0,score=0;function qr(){const q=QZ[qi%QZ.length];$('qz').innerHTML=`<b>${qi+1}. ${q[0]}</b><div class="tags" style="margin-top:8px">${q[1].map((x,i)=>`<button onclick="qa(${i})">${x}</button>`).join('')}</div>`}function qa(i){const q=QZ[qi%QZ.length];if(i===q[2])score++;qi++;if(qi<QZ.length)qr();else $('qz').innerHTML=`<div class="out">نتیجه: <b>${score} از ${QZ.length}</b></div><button class="b" onclick="qi=0;score=0;qr()">شروع دوباره</button>`}
+function tg(){const d=document.documentElement,is= d.dataset.theme==='dark';d.dataset.theme=is?'light':'dark'}rcBuild();ohm();vdiv();cap();led();rcf();rsp();t555();pw();sp('s');tr();dio();[['قانون اهم چیست؟'],['فرق سری و موازی؟'],['مقاومت LED چطور حساب می‌شود؟'],['ترانزیستور چه می‌کند؟']].forEach(q=>{const b=document.createElement('button');b.textContent=q[0];b.onclick=()=>{$('ai').value=q[0];ask()};$('sg').appendChild(b)});msg('سلام! من دستیار الکترونیک هستم. درباره مدار، قطعات و فرمول‌ها سؤال بپرس.','a');qr();
+</script>
+
+<script>
+
+const PARTS=[
+['مقاومت','R','محدود کردن جریان، تقسیم ولتاژ و بایاس','کربنی، فلزی، سیمی، SMD، متغیر (پتانسیومتر)، تریمر','پسیو'],
+['پتانسیومتر','POT','مقاومت متغیر برای تنظیم دستی','ولوم صدا، تنظیم ولتاژ، کالیبراسیون','پسیو'],
+['ترمیستور NTC','NTC','مقاومت با ضریب دمای منفی','سنجش و جبران دما، محدودکننده جریان هجومی','سنسور'],
+['ترمیستور PTC','PTC','مقاومت با ضریب دمای مثبت','حفاظت و محدودکننده جریان','سنسور'],
+['خازن سرامیکی','C','ذخیره بار و حذف نویز فرکانس بالا','بای‌پس، دکوپلینگ، فیلتر','پسیو'],
+['خازن الکترولیتی','C','ظرفیت بالا و قطب‌دار','صافی تغذیه و کوپلینگ','پسیو'],
+['خازن فیلمی','C','پایدار و کم‌اتلاف','تایمینگ، صوت و فیلتر','پسیو'],
+['خازن تانتالیوم','C','ظرفیت بالا در حجم کم و قطب‌دار','مدارهای DC و دکوپلینگ','پسیو'],
+['سلف','L','ذخیره انرژی در میدان مغناطیسی','فیلتر، مبدل و مدارهای RF','پسیو'],
+['ترانسفورماتور','T','انتقال انرژی و تغییر سطح AC','ایزولاسیون و تغذیه','مغناطیسی'],
+['دیود یکسوساز 1N4007','1N4007','یکسو‌سازی عمومی','پل دیود و حفاظت','دیود'],
+['دیود سیگنال 1N4148','1N4148','سوئیچینگ سریع سیگنال','مدارهای منطقی و کلمپ','دیود'],
+['دیود زنر','ZENER','حفاظت و مرجع ولتاژ','رگولاسیون و محدودکننده','دیود'],
+['شاتکی','SCHOTTKY','افت مستقیم کم و سرعت بالا','یکسوسازی و تغذیه سوئیچینگ','دیود'],
+['LED','LED','تبدیل جریان به نور','نشانگر و روشنایی','اپتوالکترونیک'],
+['فوتودیود','PD','تبدیل نور به جریان','حسگر نوری و ارتباطات','اپتوالکترونیک'],
+['پل دیود','BRIDGE','یکسو‌سازی تمام‌موج','منابع تغذیه','دیود'],
+['ترانزیستور NPN 2N2222','2N2222','سوئیچ و تقویت سیگنال','درایو LED و بارهای کوچک','ترانزیستور'],
+['ترانزیستور NPN BC547','BC547','ترانزیستور عمومی کم‌توان','تقویت و سوئیچینگ','ترانزیستور'],
+['ترانزیستور PNP BC557','BC557','ترانزیستور عمومی PNP','سوئیچینگ سمت مثبت','ترانزیستور'],
+['دارلینگتون TIP120','TIP120','ترانزیستور با بهره جریان بالا','درایو بار و موتور کوچک','ترانزیستور'],
+['MOSFET IRFZ44N','IRFZ44N','ماسفت کانال N توان','سوئیچینگ بار و موتور','MOSFET'],
+['MOSFET IRLZ44N','IRLZ44N','ماسفت Logic-Level','کنترل بار با میکروکنترلر','MOSFET'],
+['ماسفت P-Channel','P-MOSFET','سوئیچینگ سمت مثبت','مدارهای تغذیه','MOSFET'],
+['IGBT','IGBT','کلید توان با ورودی گیت','مبدل‌ها و توان بالا','توان'],
+['تریستور SCR','SCR','کلید نیمه‌هادی یک‌طرفه','کنترل توان AC/DC','توان'],
+['ترایاک','TRIAC','کلید دوطرفه AC','دیمر و کنترل توان AC','توان'],
+['دی‌اک','DIAC','تریگر دوطرفه برای ترایاک','مدارهای کنترل AC','توان'],
+['رله الکترومکانیکی','RELAY','کلید با تحریک الکتریکی','ایزولاسیون و کنترل بار','کلید'],
+['رله حالت جامد','SSR','کلید الکترونیکی بدون کنتاکت مکانیکی','کنترل بار AC/DC','کلید'],
+['کلید فشاری','PUSH','باز/بسته کردن دستی مدار','ورودی کاربر','کلید'],
+['کلید دوحالته','SWITCH','انتخاب وضعیت مدار','کنترل دستی','کلید'],
+['انکودر چرخشی','ENCODER','تبدیل چرخش به سیگنال دیجیتال','رابط کاربر','ورودی'],
+['NE555','NE555','تایمر آستابل و مونوستابل','پالس، PWM و تأخیر زمانی','آی‌سی'],
+['LM358','LM358','آپ‌امپ دوکاناله','تقویت و مقایسه سیگنال','آی‌سی'],
+['LM324','LM324','آپ‌امپ چهارکاناله','پردازش سیگنال','آی‌سی'],
+['LM393','LM393','مقایسه‌گر دوکاناله','تشخیص سطح ولتاژ','آی‌سی'],
+['7805','7805','رگولاتور خطی 5 ولت','منبع تغذیه','رگولاتور'],
+['7812','7812','رگولاتور خطی 12 ولت','منبع تغذیه','رگولاتور'],
+['AMS1117','AMS1117','رگولاتور LDO','تغذیه بردهای دیجیتال','رگولاتور'],
+['ماژول Buck','BUCK','کاهش ولتاژ DC-DC','منبع تغذیه قابل تنظیم','ماژول'],
+['ماژول Boost','BOOST','افزایش ولتاژ DC-DC','تغذیه قابل تنظیم','ماژول'],
+['اپتوکوپلر PC817','PC817','انتقال سیگنال با ایزولاسیون نوری','ایزولاسیون ورودی/خروجی','اپتوالکترونیک'],
+['اپتوکوپلر MOC3021','MOC3021','درایو اپتیکی ترایاک','کنترل AC','اپتوالکترونیک'],
+['گیت AND','74HC08','عمل منطقی AND','مدار دیجیتال','منطق'],
+['گیت OR','74HC32','عمل منطقی OR','مدار دیجیتال','منطق'],
+['گیت NOT','74HC04','معکوس‌کننده منطقی','مدار دیجیتال','منطق'],
+['فلیپ‌فلاپ','74HC74','ذخیره یک بیت و تقسیم فرکانس','مدار ترتیبی','منطق'],
+['شمارنده','CD4017','شمارش و توزیع پالس','LED و سکوئنسر','منطق'],
+['ADC','ADC','تبدیل آنالوگ به دیجیتال','اندازه‌گیری با میکروکنترلر','مبدل'],
+['DAC','DAC','تبدیل دیجیتال به آنالوگ','تولید سیگنال','مبدل'],
+['میکروکنترلر Arduino Uno','ATmega328P','کنترل‌گر قابل برنامه‌ریزی','پروژه‌های آموزشی و کنترل','میکروکنترلر'],
+['میکروکنترلر ESP32','ESP32','کنترل‌گر با Wi‑Fi و Bluetooth','IoT و کنترل بی‌سیم','میکروکنترلر'],
+['میکروکنترلر STM32','STM32','خانواده میکروکنترلر ARM','کنترل و پردازش تعبیه‌شده','میکروکنترلر'],
+['سنسور دما LM35','LM35','خروجی متناسب با دما','اندازه‌گیری دما','سنسور'],
+['سنسور دما/رطوبت DHT22','DHT22','اندازه‌گیری دما و رطوبت','IoT و پایش محیط','سنسور'],
+['LDR','LDR','مقاومت وابسته به نور','تشخیص روشنایی','سنسور'],
+['سنسور مادون قرمز','IR SENSOR','تشخیص نور/اجسام مادون قرمز','کنترل و شمارش','سنسور'],
+['سنسور اثر هال','HALL','تشخیص میدان مغناطیسی','سرعت و موقعیت','سنسور'],
+['پیزوالکتریک','BUZZER','تبدیل سیگنال الکتریکی به صدا','هشدار و بوق','خروجی'],
+['موتور DC','MOTOR','تبدیل انرژی الکتریکی به حرکت','حرکت و رباتیک','عملگر'],
+['سروو موتور','SERVO','کنترل زاویه‌ای موتور','رباتیک','عملگر'],
+['موتور استپر','STEPPER','حرکت زاویه‌ای مرحله‌ای','CNC و رباتیک','عملگر'],
+['LCD 16x2','LCD','نمایش متن','رابط کاربر','نمایشگر'],
+['OLED','OLED','نمایشگر ماتریسی','رابط کاربر','نمایشگر'],
+['سون‌سگمنت','7SEG','نمایش اعداد','نمایشگر','نمایشگر'],
+['کریستال کوارتز','XTAL','مرجع فرکانس پایدار','کلاک میکروکنترلر','زمان‌بندی'],
+['فیوز','FUSE','حفاظت در برابر جریان بیش از حد','حفاظت مدار','حفاظتی'],
+['TVS','TVS','حفاظت در برابر جهش ولتاژ','حفاظت ورودی','حفاظتی'],
+['واریستور MOV','MOV','محدود کردن اضافه‌ولتاژ AC','حفاظت برق','حفاظتی'],
+['هیت‌سینک','HEATSINK','انتقال حرارت قطعات توان','خنک‌کاری','مکانیکی'],
+['کانکتور ترمینالی','TERMINAL','اتصال سیم‌ها به مدار','سیم‌کشی','اتصال'],
+['بردبورد','BREADBOARD','ساخت نمونه بدون لحیم','آزمایش مدار','ابزار'],
+['پروب اسیلوسکوپ','PROBE','اندازه‌گیری سیگنال','آزمایش و عیب‌یابی','ابزار']
+];
+let partCat='همه';
+function renderPartCats(){
+ const cats=['همه',...new Set(PARTS.map(x=>x[4]))];
+ $('partCats').innerHTML=cats.map(c=>`<button onclick="partCat='${c}';filterParts()">${c}</button>`).join('');
+}
+function filterParts(){
+ const q=($('cpq')?.value||'').trim().toLowerCase();
+ const hits=PARTS.filter(x=>(partCat==='همه'||x[4]===partCat)&&x.join(' ').toLowerCase().includes(q));
+ $('partList').innerHTML=hits.map(x=>`<div class="out"><b>${x[0]}</b> <span class="ltr">(${x[1]})</span><br>${x[2]}<br><small>کاربرد/نوع: ${x[3]} · دسته: ${x[4]}</small><br><button class="b" onclick='openDesigner(${JSON.stringify(x[0])},"قطعه",${JSON.stringify(x[1])})'>➕ استفاده در طراحی</button></div>`).join('')||'<div class="out">قطعه‌ای پیدا نشد.</div>';
+}
+function designLed(){
+ const v=N('ddv'),vf=N('ddf'),ma=N('ddi');
+ if(!(v>vf&&ma>0)){$('designOut').textContent='ولتاژ منبع باید از ولتاژ LED بیشتر باشد و جریان مثبت باشد.';return}
+ const r=(v-vf)/(ma/1000);
+ $('designOut').innerHTML=`مقاومت محاسبه‌شده: <b>${eng(r,'Ω')}</b><br>مقدار استاندارد نزدیک را انتخاب کنید و توان مقاومت را نیز بررسی کنید.`;
+}
+function designHint(x){
+ const map={تغذیه:'مقاومت، خازن الکترولیتی، دیود یکسوساز، پل دیود، رگولاتور 7805/7812، فیوز و TVS',
+ LED:'LED، مقاومت سری، ترانزیستور یا MOSFET برای درایو، منبع تغذیه',
+ 'تقویت‌کننده':'LM358 یا LM324، مقاومت‌ها، خازن‌های کوپلینگ و دکوپلینگ',
+ تایمر:'NE555، مقاومت، خازن، دیود و پتانسیومتر',
+ رله:'رله، ترانزیستور/MOSFET درایور، دیود هرزگرد، مقاومت و منبع تغذیه',
+ میکروکنترلر:'Arduino/ESP32/STM32، رگولاتور، خازن دکوپلینگ، کریستال در صورت نیاز و رابط‌های ورودی/خروجی'};
+ $('designHint').innerHTML=`<b>${x}</b><br>${map[x]}`;
+}
+const BOARDS=[
+['Arduino Uno R3','میکروکنترلر','5V','ATmega328P','14 دیجیتال، 6 آنالوگ','LED، سنسور، رله، LCD، موتور','برد آموزشی همه‌کاره برای پروژه‌های مبتدی و متوسط'],
+['Arduino Nano','میکروکنترلر','5V','ATmega328P','14 دیجیتال، 8 آنالوگ','سنسور، رله، نمایشگر، پروژه‌های کم‌حجم','نسخه کوچک‌تر Uno برای بردبورد'],
+['ESP32 DevKit','میکروکنترلر','3.3V','ESP32','Wi‑Fi + Bluetooth، GPIO متعدد','IoT، رله، سنسور، OLED، MQTT','برد قدرتمند برای پروژه‌های بی‌سیم'],
+['NodeMCU ESP8266','میکروکنترلر','3.3V','ESP8266','Wi‑Fi، GPIO','IoT، رله، سنسور، وب‌سرور','برد اقتصادی برای اینترنت اشیا'],
+['Raspberry Pi Pico','میکروکنترلر','3.3V','RP2040','GPIO، ADC، PWM','سنسور، موتور، نمایشگر','برد کوچک دو هسته‌ای برای کنترل و آموزش'],
+['STM32 Blue Pill','میکروکنترلر','3.3V','STM32F103C8T6','GPIO، ADC، PWM، UART','کنترل موتور، سنسور، پروژه‌های صنعتی','برد آموزشی مبتنی بر STM32'],
+['Arduino Mega 2560','میکروکنترلر','5V','ATmega2560','54 دیجیتال، 16 آنالوگ','رباتیک، CNC، نمایشگرهای متعدد','تعداد پایه زیاد برای پروژه‌های بزرگ'],
+['ESP32-CAM','میکروکنترلر','5V ورودی / 3.3V منطقی','ESP32 + Camera','Wi‑Fi، دوربین','دوربین هوشمند، IoT، تشخیص تصویر','برد جمع‌وجور برای پروژه‌های تصویری'],
+['L298N Motor Driver','درایور موتور','5–35V','L298N','2 کانال موتور','موتور DC، رباتیک','درایور آماده دو موتوره با ورودی کنترل منطقی'],
+['TB6612FNG Motor Driver','درایور موتور','4.5–13.5V','TB6612FNG','2 کانال موتور','رباتیک، موتور DC','درایور کوچک و کم‌اتلاف برای دو موتور'],
+['5V Relay Module','رله','5V','Relay + Driver','1 یا چند کانال','لامپ، پمپ، فن، بار AC/DC','ماژول آماده رله با مدار درایور'],
+['4-Channel Relay Module','رله','5V','4×Relay','4 کانال','اتوماسیون، کنترل بار','کنترل چهار بار با یک برد'],
+['LM2596 Buck Module','منبع تغذیه','4–35V ورودی','LM2596','خروجی قابل تنظیم','تغذیه آردوینو، سنسورها، مدارها','مبدل کاهنده DC-DC آماده'],
+['XL6009 Boost Module','منبع تغذیه','3–32V ورودی','XL6009','خروجی قابل تنظیم','افزایش ولتاژ پروژه‌ها','مبدل افزاینده DC-DC آماده'],
+['TP4056 Charger Module','منبع تغذیه','5V ورودی','TP4056','شارژ باتری لیتیومی','باتری 1 سل، پروژه‌های قابل‌حمل','ماژول شارژ تک‌سل لیتیوم با حفاظت در نسخه‌های محافظ‌دار'],
+['PAM8403 Audio Module','صوت','5V','PAM8403','2× کانال صوتی','اسپیکر، آمپلی‌فایر کوچک','آمپلی‌فایر صوتی کلاس D آماده'],
+['MAX7219 8×8 Matrix','نمایشگر','5V','MAX7219','SPI','نمایش متن و انیمیشن','ماژول ماتریس LED با درایور داخلی'],
+['OLED 0.96 I2C','نمایشگر','3.3/5V*','SSD1306','I2C','نمایش داده سنسورها و منو','نمایشگر OLED آماده (*بسته به ماژول)'],
+['LCD 16×2 I2C','نمایشگر','5V','HD44780 + PCF8574','I2C','نمایش مقدار و منو','LCD با مبدل I2C آماده'],
+['HC-SR04','سنسور','5V','Ultrasonic','Trig/Echo','اندازه‌گیری فاصله، رباتیک','ماژول فاصله‌سنج اولتراسونیک آماده'],
+['PIR HC-SR501','سنسور','5V','PIR','Digital OUT','تشخیص حرکت، روشنایی','ماژول سنجش حرکت آماده'],
+['DHT22 Module','سنسور','3.3/5V','DHT22','Digital DATA','دما و رطوبت','ماژول آماده اندازه‌گیری محیط'],
+['LDR Sensor Module','سنسور','3.3/5V','LDR + Comparator','Digital OUT','نور، روشنایی خودکار','برد سنسور نور آماده'],
+['NE555 Timer Module','تایمر','5–15V','NE555','OUT','فلاشر، PWM، تأخیر','برد آماده برای مدارهای تایمر 555'],
+['LM358 Op-Amp Module','تقویت‌کننده','3–32V','LM358','2 Op-Amp','تقویت، فیلتر، مقایسه','ماژول آموزشی تقویت‌کننده عملیاتی'],
+['ADS1115 ADC Module','مبدل','2–5.5V','ADS1115','4 ورودی ADC','اندازه‌گیری دقیق سنسورها','مبدل آنالوگ به دیجیتال 16 بیتی آماده'],
+['PC817 Optocoupler Module','ایزولاسیون','3.3/5V','PC817','Digital isolation','ایزولاسیون سیگنال و کنترل بار','ماژول اپتوکوپلر برای جداسازی بخش کنترل و قدرت']
+,
+['Arduino Uno R4 WiFi','میکروکنترلر','5V','RA4M1 + ESP32-S3','14 دیجیتال، 6 آنالوگ، Wi‑Fi/Bluetooth','IoT، کنترل، سنسورها، نمایشگر','نسخه جدید Uno با هسته 32 بیتی و ارتباط بی‌سیم'],
+['Arduino Uno R4 Minima','میکروکنترلر','5V','RA4M1','14 دیجیتال، 6 آنالوگ','کنترل، آموزش، رباتیک','برد 32 بیتی نسل جدید خانواده Uno'],
+['Arduino Leonardo','میکروکنترلر','5V','ATmega32U4','20 دیجیتال، 12 آنالوگ','USB HID، کنترل، آموزش','برد آردوینو با USB داخلی در میکروکنترلر'],
+['Arduino Micro','میکروکنترلر','5V','ATmega32U4','20 دیجیتال، 12 آنالوگ','HID، کنترلر کوچک، رباتیک','برد کوچک با قابلیت USB HID'],
+['Arduino Pro Mini','میکروکنترلر','5V/3.3V','ATmega328P','14 دیجیتال، 8 آنالوگ','پروژه کم‌حجم، سنسور، رباتیک','برد کوچک برای پروژه‌های تعبیه‌شده'],
+['ESP32-S3 DevKit','میکروکنترلر','5V ورودی / 3.3V منطقی','ESP32-S3','GPIO، ADC، USB، Wi‑Fi/Bluetooth','AIoT، USB، نمایشگر، سنسور','برد توسعه قدرتمند ESP32-S3'],
+['ESP32-C3 DevKit','میکروکنترلر','5V ورودی / 3.3V منطقی','ESP32-C3','GPIO، ADC، Wi‑Fi/BLE','IoT کم‌مصرف، سنسورها','برد اقتصادی مبتنی بر RISC-V'],
+['ESP32 DevKitC','میکروکنترلر','5V ورودی / 3.3V منطقی','ESP32-WROOM','GPIO، ADC، DAC، Wi‑Fi/Bluetooth','IoT، کنترل، وب‌سرور','برد توسعه عمومی ESP32'],
+['Wemos D1 Mini','میکروکنترلر','5V ورودی / 3.3V منطقی','ESP8266','Wi‑Fi، GPIO، I2C، SPI','IoT، خانه هوشمند','برد بسیار کوچک و مناسب بردبورد'],
+['Raspberry Pi Pico W','میکروکنترلر','5V USB / 3.3V منطقی','RP2040 + Wi‑Fi','GPIO، ADC، PWM','IoT، کنترل، سنسورها','نسخه بی‌سیم Pico'],
+['Raspberry Pi Pico 2','میکروکنترلر','5V USB / 3.3V منطقی','RP2350','GPIO، ADC، PWM','کنترل، آموزش، رباتیک','نسل جدید Pico با RP2350'],
+['STM32 Nucleo F401RE','میکروکنترلر','5V USB / 3.3V منطقی','STM32F401RE','GPIO، ADC، PWM، UART، SPI','آموزش ARM، کنترل موتور','برد رسمی Nucleo برای توسعه STM32'],
+['STM32 Nucleo G431RB','میکروکنترلر','5V USB / 3.3V منطقی','STM32G431RB','ADC، PWM، تایمر، UART','کنترل موتور، قدرت، صنعتی','برد مناسب کاربردهای کنترل و توان'],
+['Teensy 4.1','میکروکنترلر','5V USB / 3.3V منطقی','i.MX RT1062','GPIO، ADC، PWM، Ethernet','پردازش سریع، MIDI، رباتیک','برد توسعه بسیار سریع ARM'],
+['Raspberry Pi Zero 2 W','کامپیوتر تک‌بردی','5V','BCM2710A1','Wi‑Fi، Bluetooth، GPIO','Linux، IoT، دوربین','کامپیوتر کوچک برای پروژه‌های لینوکسی'],
+['Raspberry Pi 4 Model B','کامپیوتر تک‌بردی','5V USB-C','Broadcom SoC','GPIO، USB، HDMI، Ethernet','سرور، رباتیک، دوربین، آموزش','کامپیوتر تک‌بردی چندمنظوره'],
+['PCA9685 16-Channel PWM','درایور','5V','PCA9685','16 کانال PWM، I2C','سروو، LED، رباتیک','درایور PWM شانزده کاناله'],
+['DRV8825 Stepper Driver','درایور موتور','8.2–45V','DRV8825','1 موتور استپر','CNC، پرینتر سه‌بعدی','درایور میکرو‌استپ موتور پله‌ای'],
+['A4988 Stepper Driver','درایور موتور','8–35V','A4988','1 موتور استپر','CNC، رباتیک، پرینتر سه‌بعدی','درایور رایج موتور پله‌ای'],
+['BTS7960 Motor Driver','درایور موتور','5.5–27V','BTS7960','1 کانال پرقدرت','موتور DC، رباتیک','درایور H-Bridge برای جریان بالاتر'],
+['Cytron MD10C','درایور موتور','5–30V','MOSFET H-Bridge','1 موتور DC','رباتیک و موتورهای توان بالا','درایور موتور تک‌کاناله با PWM'],
+['MOSFET IRF520 Module','درایور','5V کنترل','IRF520','1 کانال MOSFET','LED، موتور کوچک، بار DC','ماژول سوئیچ MOSFET؛ برای بارهای مختلف نیاز به بررسی سطح گیت دارد'],
+['Solid State Relay Module','رله','3.3/5V کنترل','SSR','1 کانال','کنترل بار AC/DC*','رله حالت جامد؛ نوع بار به مدل SSR بستگی دارد'],
+['8-Channel Relay Module','رله','5V','8×Relay','8 کانال','اتوماسیون و کنترل بار','ماژول هشت رله با ورودی‌های کنترل'],
+['16-Channel Relay Module','رله','5V','16×Relay','16 کانال','اتوماسیون','ماژول رله چندکاناله برای کنترل بار'],
+['XL4015 Buck Module','منبع تغذیه','5–36V ورودی','XL4015','خروجی قابل تنظیم','تغذیه و شارژ','مبدل کاهنده DC با قابلیت تنظیم جریان در برخی نسخه‌ها'],
+['MT3608 Boost Module','منبع تغذیه','2–24V ورودی','MT3608','خروجی قابل تنظیم','پروژه‌های قابل حمل','مبدل افزاینده کوچک'],
+['MP1584EN Mini Buck','منبع تغذیه','4.5–28V ورودی','MP1584EN','خروجی قابل تنظیم','تغذیه بردهای کوچک','مبدل کاهنده کوچک و کم‌حجم'],
+['BMS 1S 18650 Module','مدیریت باتری','3.7V سلول','Protection IC','B+/B− و P+/P−','حفاظت باتری Li-ion','ماژول حفاظت تک‌سل؛ مشخصات جریان به نسخه بستگی دارد'],
+['BMS 2S 3S Li-ion Module','مدیریت باتری','سلول‌های Li-ion سری','Protection IC','اتصالات سلول و خروجی','بسته باتری چندسل','ماژول مدیریت/حفاظت باتری؛ باید با تعداد سلول سازگار باشد'],
+['INA219 Current Sensor','سنسور','3–5.5V','INA219','I2C، اندازه‌گیری جریان/ولتاژ','پایش مصرف، منبع تغذیه','سنسور مانیتور جریان و ولتاژ سمت بالا'],
+['ACS712 Current Sensor','سنسور','5V','ACS712','خروجی آنالوگ','اندازه‌گیری جریان AC/DC','سنسور جریان اثر هال'],
+['ACS758 Current Sensor','سنسور','5V','ACS758','خروجی آنالوگ','اندازه‌گیری جریان بالاتر','سنسور جریان اثر هال برای محدوده‌های بالاتر بسته به مدل'],
+['BMP280 Pressure Module','سنسور','1.8–3.6V*','BMP280','I2C/SPI','فشار و ارتفاع','ماژول فشارسنج (*سطح تغذیه وابسته به برد ماژول)'],
+['MPU6050 IMU Module','سنسور','3.3V*','MPU6050','I2C','حرکت، رباتیک، تعادل','شتاب‌سنج و ژیروسکوپ شش‌محوره'],
+['MAX30102 Heart Sensor','سنسور','3.3V*','MAX30102','I2C','اندازه‌گیری نوری آموزشی','ماژول حسگر نوری؛ مناسب کاربردهای آموزشی و آزمایشگاهی'],
+['MQ-2 Gas Sensor','سنسور','5V','MQ-2','Analog + Digital','تشخیص گاز و دود','ماژول حسگر گاز برای پروژه‌های آموزشی'],
+['Flame Sensor Module','سنسور','3.3/5V','IR Sensor','Analog/Digital','تشخیص شعله آموزشی','ماژول تشخیص نور شعله'],
+['Rain Sensor Module','سنسور','3.3/5V','Rain Plate + Comparator','Analog/Digital','تشخیص باران','ماژول سنجش رطوبت سطحی'],
+['Rotary Encoder KY-040','ورودی','3.3/5V','Incremental Encoder','CLK/DT/SW','منو، تنظیمات، کنترل موتور','انکودر چرخشی با کلید فشاری'],
+['4×4 Keypad Module','ورودی','3.3/5V','Matrix Keys','8 خط','رمز، منو، کنترل','صفحه‌کلید ماتریسی 16 کلیدی'],
+['RFID RC522 Module','ارتباطی','3.3V','MFRC522','SPI','RFID، کنترل دسترسی آموزشی','خواننده کارت RFID با رابط SPI'],
+['HC-05 Bluetooth Module','ارتباطی','5V*','Bluetooth SPP','UART','ارتباط سریال بی‌سیم','ماژول بلوتوث کلاسیک (*سطح منطقی ورودی باید بررسی شود)'],
+['NRF24L01 Wireless Module','ارتباطی','3.3V','nRF24L01+','SPI','ارتباط بی‌سیم کوتاه‌برد','ماژول فرستنده/گیرنده 2.4GHz'],
+['SIM800L GSM Module','ارتباطی','حدود 4V','SIM800L','UART','SMS، تماس، IoT سلولار','ماژول GSM که به تغذیه مناسب و پایدار نیاز دارد'],
+['GPS NEO-6M Module','ارتباطی','3.3/5V*','u-blox NEO-6M','UART','موقعیت‌یابی، رباتیک','ماژول GPS آماده (*وابسته به برد ماژول)'],
+['WS2812B LED Matrix','نمایشگر','5V','WS2812B','1-wire data','نورپردازی، افکت، نمایش','LEDهای آدرس‌پذیر زنجیره‌ای'],
+['TM1637 4-Digit Display','نمایشگر','3.3/5V','TM1637','CLK/DIO','نمایش عدد، ساعت','نمایشگر چهاررقمی با درایور آماده'],
+['TFT ILI9341 SPI','نمایشگر','3.3V*','ILI9341','SPI','رابط کاربری، گرافیک','نمایشگر رنگی SPI (*سطح تغذیه وابسته به ماژول)'],
+['MicroSD Card Module','ذخیره‌سازی','3.3/5V*','MicroSD','SPI','ثبت داده، فایل','ماژول کارت حافظه برای ذخیره داده'],
+['DS3231 RTC Module','زمان‌سنج','3.3/5V*','DS3231','I2C','ساعت، ثبت داده','ماژول ساعت دقیق بلادرنگ با باتری پشتیبان'],
+['PCF8574 I2C Expander','گسترش I/O','2.5–6V','PCF8574','8 I/O، I2C','افزایش پایه‌ها، LCD','گسترش‌دهنده ورودی/خروجی هشت‌بیتی'],
+['MCP23017 I2C Expander','گسترش I/O','1.8–5.5V','MCP23017','16 I/O، I2C','کلیدها، LED، رله','گسترش‌دهنده 16 خط I/O'],
+['74HC595 Shift Register Module','منطقی','2–6V','74HC595','Serial In / Parallel Out','LED، گسترش خروجی','شیفت رجیستر هشت‌بیتی'],
+['74HC165 Input Expander','منطقی','2–6V','74HC165','Parallel In / Serial Out','کلیدها و ورودی‌ها','شیفت رجیستر برای افزایش ورودی‌ها'],
+['Logic Level Converter 4CH','مبدل سطح','LV/HV','MOSFET level shifter','4 کانال','اتصال 3.3V و 5V','مبدل سطح منطقی دوطرفه برای سیگنال‌های مناسب'],
+['USB-TTL CH340 Module','رابط','5V USB','CH340','UART','برنامه‌ریزی و دیباگ','مبدل USB به UART'],
+['USB-TTL CP2102 Module','رابط','5V USB','CP2102','UART','برنامه‌ریزی و مانیتور سریال','مبدل USB به UART'],
+['FT232RL USB-UART','رابط','5V USB','FT232RL','UART','برنامه‌ریزی و ارتباط سریال','مبدل USB به UART'],
+['CAN Bus MCP2515 Module','ارتباطی','5V/3.3V*','MCP2515 + Transceiver','SPI + CAN','خودرو، صنعتی','رابط CAN با SPI (*وابسته به برد و ترنسیور)'],
+['RS485 MAX485 Module','ارتباطی','5V','MAX485','UART/RS485','شبکه صنعتی، Modbus','مبدل UART به RS485'],
+['Audio MAX98357 I2S Amp','صوت','3.3–5V','MAX98357A','I2S','صوت دیجیتال، اسپیکر','آمپلی‌فایر صوتی I2S کلاس D'],
+['DFPlayer Mini','صوت','3.2–5V','YX5200/Module','UART','پخش فایل MP3','ماژول پخش صوت با کارت microSD'],
+['HX711 Load Cell Module','سنسور','2.6–5.5V','HX711','2-wire load cell + serial','ترازو و وزن','مبدل دقیق برای لودسل'],
+['VL53L0X ToF Sensor','سنسور','2.6–3.5V*','VL53L0X','I2C','اندازه‌گیری فاصله','سنسور فاصله لیزری ToF (*ماژول‌ها ممکن است رگولاتور داشته باشند)'],
+['TTP223 Touch Module','ورودی','2–5.5V','TTP223','Digital OUT','کلید لمسی','ماژول لمس خازنی'],
+['PIR AM312 Mini','سنسور','2.7–12V','PIR','Digital OUT','تشخیص حرکت','ماژول PIR کوچک'],
+['SG90 Servo Module','محرک','4.8–6V','Micro Servo','PWM','بازو، رباتیک','سرووموتور کوچک برای کنترل زاویه'],
+['28BYJ-48 + ULN2003','محرک','5V','ULN2003','4-phase control','حرکت دقیق، رباتیک','موتور پله‌ای کوچک به همراه برد درایور'],
+['Peltier TEC Module Driver','درایور','بسته به طراحی','MOSFET Driver','PWM','کنترل دما آزمایشگاهی','بلوک درایور برای المان ترموالکتریک؛ نیازمند طراحی حرارتی مناسب']
+,['Arduino Mega 2560','میکروکنترلر','5V','ATmega2560','54 دیجیتال، 16 آنالوگ','پروژه‌های بزرگ، LCD، رله، موتور','تعداد پایه زیاد برای پروژه‌های چندبخشی']
+,['Arduino Leonardo','میکروکنترلر','5V','ATmega32U4','20 دیجیتال، 12 آنالوگ','USB HID، کنترلر، سنسور','مناسب پروژه‌های USB و کنترل']
+,['Arduino Micro','میکروکنترلر','5V','ATmega32U4','20 دیجیتال','USB HID، کیپد، کنترل','نسخه کوچک Leonardo']
+,['Arduino Pro Mini 5V','میکروکنترلر','5V','ATmega328P','14 دیجیتال، 8 آنالوگ','پروژه‌های کم‌حجم','برد کوچک برای نصب دائمی']
+,['Arduino Pro Mini 3.3V','میکروکنترلر','3.3V','ATmega328P','14 دیجیتال، 8 آنالوگ','سنسور و ارتباط بی‌سیم','مناسب سیستم‌های کم‌مصرف']
+,['ESP32-S3 DevKit','میکروکنترلر','3.3V','ESP32-S3','GPIO، Wi-Fi، Bluetooth LE','IoT، نمایشگر، USB','نسل جدید ESP32']
+,['ESP32-C3 DevKit','میکروکنترلر','3.3V','ESP32-C3','GPIO، Wi-Fi، BLE','IoT کم‌مصرف','هسته RISC-V']
+,['ESP32-CAM','میکروکنترلر','5V','ESP32 + OV2640','Wi-Fi، دوربین','تصویر، امنیت، IoT','برد دوربین‌دار']
+,['ESP8266 D1 Mini','میکروکنترلر','3.3V','ESP8266','GPIO، Wi-Fi','IoT، رله، OLED','برد کوچک Wi-Fi']
+,['Raspberry Pi Pico W','میکروکنترلر','3.3V','RP2040','26 GPIO، Wi-Fi','IoT، کنترل، سنسور','Pico با ارتباط بی‌سیم']
+,['Raspberry Pi Zero 2 W','کامپیوتر تک‌بردی','5V','BCM2710A1','GPIO، Wi-Fi، Bluetooth','دوربین، سرور، ربات','کامپیوتر کوچک لینوکسی']
+,['STM32 Blue Pill','میکروکنترلر','3.3V','STM32F103C8T6','GPIO، ADC، PWM','کنترل موتور، سنسور','برد آموزشی STM32']
+,['STM32 Black Pill','میکروکنترلر','3.3V','STM32F411','GPIO، ADC، PWM','پردازش سریع، کنترل','برد قدرتمند و کوچک']
+,['Teensy 4.0','میکروکنترلر','3.3V','i.MX RT1062','GPIO، ADC، PWM','صوت، DSP، رباتیک','میکروکنترلر بسیار سریع']
+,['BeagleBone Black','کامپیوتر تک‌بردی','5V','AM3358','GPIO، ADC، PWM','اتوماسیون، لینوکس','برد لینوکسی صنعتی']
+,['L298N Motor Driver','درایور موتور','5-35V','L298N','2 کانال موتور','DC موتور، ربات','درایور دوکاناله H-Bridge']
+,['TB6612FNG','درایور موتور','4.5-13.5V','TB6612FNG','2 کانال','موتور DC، ربات','کم‌اتلاف‌تر از L298N']
+,['DRV8833','درایور موتور','2.7-10.8V','DRV8833','2 کانال','موتور کوچک','مناسب موتورهای باتری']
+,['A4988 Stepper Driver','درایور موتور','8-35V','A4988','STEP/DIR','پرینتر سه‌بعدی، CNC','درایور موتور پله‌ای']
+,['DRV8825 Stepper Driver','درایور موتور','8.2-45V','DRV8825','STEP/DIR','CNC، پرینتر','جریان و میکرو‌استپ بالاتر']
+,['TMC2208','درایور موتور','4.75-36V','TMC2208','UART، STEP/DIR','پرینتر سه‌بعدی','درایور کم‌صدا']
+,['BTS7960','درایور موتور','5-27V','BTS7960','PWM دوطرفه','موتور پرقدرت','درایور جریان بالا']
+,['Relay 1CH 5V','رله','5V','Songle SRD','1 خروجی رله','لامپ، موتور، بار AC/DC','سوئیچ الکتریکی ایزوله']
+,['Relay 4CH 5V','رله','5V','4×SRD','4 خروجی','اتوماسیون','کنترل چهار بار']
+,['Relay 8CH 5V','رله','5V','8×SRD','8 خروجی','اتوماسیون','کنترل چند بار']
+,['SSR 2CH','رله','5V','Solid State Relay','2 خروجی','بار AC','رله حالت جامد']
+,['PCA9685 Servo Driver','درایور سروو','5V','PCA9685','16 کانال PWM','سروو، LED','PWM شانزده کاناله I2C']
+,['ADS1115 ADC','ADC','2-5.5V','ADS1115','4 ورودی ADC','اندازه‌گیری دقیق','ADC شانزده بیتی']
+,['MCP3008 ADC','ADC','2.7-5.5V','MCP3008','8 ورودی ADC','Raspberry Pi، سنسور','ADC هشت کاناله SPI']
+,['MCP23017 IO Expander','گسترش I/O','1.8-5.5V','MCP23017','16 GPIO','کیپد، رله، LED','افزایش پایه‌های دیجیتال']
+,['PCF8574 IO Expander','گسترش I/O','2.5-6V','PCF8574','8 GPIO','LCD، کیپد','گسترش‌دهنده I2C']
+,['MAX7219 LED Matrix','نمایشگر','5V','MAX7219','SPI','ماتریس LED، سون‌سگمنت','درایور نمایشگر']
+,['TM1637 4-Digit','نمایشگر','3.3-5V','TM1637','CLK/DIO','ساعت، شمارنده','نمایشگر چهار رقمی']
+,['OLED 0.96 I2C','نمایشگر','3.3-5V','SSD1306','SDA/SCL','نمایش داده، سنسور','OLED تک‌رنگ']
+,['TFT ILI9341','نمایشگر','3.3V','ILI9341','SPI','رابط کاربری، گرافیک','نمایشگر رنگی']
+,['LCD 20x4 I2C','نمایشگر','5V','HD44780 + PCF8574','SDA/SCL','نمایش داده','LCD چهار خطی']
+,['WS2812B Matrix','LED هوشمند','5V','WS2812B','Data In/Out','نورپردازی، افکت','LEDهای آدرس‌پذیر']
+,['HC-SR04','سنسور','5V','Ultrasonic','TRIG/ECHO','اندازه‌گیری فاصله','سنسور اولتراسونیک']
+,['HC-SR501 PIR','سنسور','5V','PIR','OUT','تشخیص حرکت','سنسور حرکت مادون‌قرمز']
+,['DHT11','سنسور','3-5.5V','DHT11','DATA','دما و رطوبت','سنسور اقتصادی']
+,['DHT22','سنسور','3.3-6V','AM2302','DATA','دما و رطوبت','دقت بالاتر از DHT11']
+,['BMP280','سنسور','1.8-3.6V','BMP280','I2C/SPI','فشار و ارتفاع','سنسور فشار دقیق']
+,['BME280','سنسور','1.8-3.6V','BME280','I2C/SPI','دما، رطوبت، فشار','سنسور محیطی سه‌گانه']
+,['MPU6050','سنسور','2.3-3.4V','MPU6050','I2C','شتاب و ژیروسکوپ','IMU شش‌محوره']
+,['MPU9250','سنسور','2.4-3.6V','MPU9250','I2C/SPI','حرکت و جهت','IMU نه‌محوره']
+,['VL53L0X','سنسور','2.6-3.5V','VL53L0X','I2C','فاصله','سنسور ToF']
+,['MAX6675 Thermocouple','سنسور','3.0-5.5V','MAX6675','SPI','دما بالا','خواندن ترموکوپل K']
+,['INA219 Current Sensor','سنسور','3-5.5V','INA219','I2C','ولتاژ و جریان','مانیتور توان باس']
+,['ACS712 Current Sensor','سنسور','5V','ACS712','Analog OUT','اندازه‌گیری جریان','سنسور جریان اثر هال']
+,['MQ-2 Gas Sensor','سنسور','5V','MQ-2','Analog/Digital','گاز و دود','سنسور گاز']
+,['RC522 RFID','ارتباط','3.3V','MFRC522','SPI','RFID، قفل','خواندن کارت RFID']
+,['NRF24L01','ارتباط','3.3V','nRF24L01+','SPI','ارتباط بی‌سیم','رادیوی 2.4GHz']
+,['HC-05 Bluetooth','ارتباط','5V','HC-05','UART','بلوتوث سریال','ماژول Bluetooth کلاسیک']
+,['SIM800L GSM','ارتباط','3.7-4.2V','SIM800L','UART','SMS، تماس، اینترنت','ماژول GSM']
+,['NEO-6M GPS','ارتباط','3.3-5V','u-blox NEO-6M','UART','موقعیت‌یابی','گیرنده GPS']
+,['MAX485 RS485','ارتباط','5V','MAX485','A/B، UART','شبکه صنعتی','مبدل UART به RS485']
+,['MCP2515 CAN','ارتباط','5V','MCP2515','SPI، CAN','خودرو، صنعت','کنترلر CAN']
+,['MicroSD SPI','ذخیره‌سازی','3.3V','MicroSD','SPI','ثبت داده','ذخیره اطلاعات']
+,['DS3231 RTC','زمان','3.3-5V','DS3231','I2C','ساعت و دیتالاگر','RTC دقیق با باتری']
+,['TP4056 Charger','تغذیه','5V IN','TP4056','BAT+/BAT-','شارژ Li-Ion','شارژر تک‌سلول']
+,['BMS 1S','مدیریت باتری','3.7V','Protection IC','B+/B-/P+/P-','باتری لیتیوم','محافظت تک‌سلول']
+,['LM2596 Buck','تغذیه','4-35V IN','LM2596','VIN/VOUT','کاهش ولتاژ','مبدل Buck قابل تنظیم']
+,['XL6009 Boost','تغذیه','3-32V IN','XL6009','VIN/VOUT','افزایش ولتاژ','مبدل Boost قابل تنظیم']
+,['MT3608 Boost','تغذیه','2-24V IN','MT3608','VIN/VOUT','افزایش ولتاژ کوچک','ماژول Boost کم‌حجم']
+,['MP1584 Buck','تغذیه','4.5-28V IN','MP1584','VIN/VOUT','کاهش ولتاژ','Buck کوچک و راندمان بالا']
+,['AMS1117 3.3V','رگولاتور','4.5-12V IN','AMS1117','IN/OUT/GND','تغذیه 3.3V','رگولاتور خطی']
+,['7805 Regulator','رگولاتور','7-25V IN','L7805','IN/GND/OUT','تغذیه 5V','رگولاتور خطی 5V']
+,['LM358 Op-Amp','تقویت‌کننده','3-32V','LM358','2 Op-Amp','فیلتر، تقویت، مقایسه','آپ‌امپ دوگانه']
+,['LM393 Comparator','تقویت‌کننده','2-36V','LM393','2 Comparator','آستانه، سنسور','مقایسه‌گر دوگانه']
+,['MAX98357A I2S Amp','صوت','2.5-5.5V','MAX98357A','I2S','اسپیکر دیجیتال','تقویت‌کننده کلاس D']
+,['PAM8403 Audio Amp','صوت','2.5-5.5V','PAM8403','L/R IN','اسپیکر','آمپلی‌فایر استریو']
+,['DFPlayer Mini','صوت','3.2-5V','YX5200','UART','پخش MP3','پخش‌کننده صوتی']
+,['SG90 Servo','محرک','4.8-6V','Servo Motor','PWM','بازو، ربات','سروو کوچک']
+,['28BYJ-48 + ULN2003','محرک','5V','ULN2003','4 Phase','موتور پله‌ای','پکیج موتور و درایور']
+,['5V Buzzer Module','خروجی','3.3-5V','Buzzer','SIG','هشدار، صدا','بازر آماده']
+,['IR Receiver VS1838B','ورودی','3.3-5V','VS1838B','OUT','ریموت IR','گیرنده مادون‌قرمز']
+,['4x4 Keypad','ورودی','3.3-5V','Matrix','8 GPIO','ورودی کاربر','کیپد ماتریسی']
+,['Rotary Encoder KY-040','ورودی','3.3-5V','Encoder','CLK/DT/SW','منو، کنترل','انکودر چرخشی']
+
+];
+
+function renderBoardCats(){
+  const el=document.getElementById('boardCats'); if(!el) return;
+  const cats=['همه',...new Set(BOARDS.map(x=>x[1]))];
+  el.innerHTML=cats.map(c=>`<button class="b" onclick="filterBoards('${c.replace(/'/g,"\\'")}')">${c}</button>`).join('');
+}
+let selectedBoardCat='همه';
+function filterBoards(cat){
+  if(cat) selectedBoardCat=cat;
+  const q=(document.getElementById('boardq')?.value||'').trim().toLowerCase();
+  const list=BOARDS.filter(x=>(selectedBoardCat==='همه'||x[1]===selectedBoardCat)&&x.join(' ').toLowerCase().includes(q));
+  const el=document.getElementById('boardList'); if(!el) return;
+  el.innerHTML=list.length?list.map((b,i)=>`<div class="item" style="margin-top:8px;padding:10px;border:1px solid rgba(255,255,255,.08);border-radius:12px"><b>${b[0]}</b><div class="help">${b[6]}</div><small>دسته: ${b[1]} · تغذیه: ${b[2]} · کنترلر/چیپ: ${b[3]} · پایه‌ها: ${b[4]} · کاربرد: ${b[5]}</small><br><button class="b" onclick="useBoardInDesign(${BOARDS.indexOf(b)})">➕ استفاده در طراحی</button></div>`).join(''):'<div class="help">بردی با این مشخصات پیدا نشد.</div>';
+}
+function selectBoard(i){
+  const b=BOARDS[i]; if(!b) return;
+  const common={
+    'Arduino Uno R3':['LED با مقاومت 220Ω','سنسور LDR','رله 5V','LCD 16×2 I2C'],
+    'Arduino Nano':['LED RGB','سنسور DHT22','سروو موتور','OLED I2C'],
+    'ESP32 DevKit':['OLED I2C','رله 5V','DHT22','LED'],
+    'NodeMCU ESP8266':['رله 5V','DHT22','LED','وب‌سرور'],
+    'Raspberry Pi Pico':['LED','ADC','سنسور دما','سروو'],
+    'STM32 Blue Pill':['LED','UART','سنسور','PWM'],
+    'Arduino Mega 2560':['LCD','درایور موتور','سنسورها','رله'],
+    'ESP32-CAM':['دوربین','LED','سنسور PIR','Wi‑Fi'],
+    'L298N Motor Driver':['موتور DC','منبع 12V','دیود حفاظتی','سیگنال PWM'],
+    'TB6612FNG Motor Driver':['2× موتور DC','PWM','باتری','GND مشترک'],
+    '5V Relay Module':['Arduino/ESP32','بار AC/DC','ترمینال','دیود/درایور'],
+    '4-Channel Relay Module':['کنترلر 4 کاناله','4 بار','تغذیه 5V','GND مشترک'],
+    'LM2596 Buck Module':['ورودی DC','خروجی تنظیم‌شده','خازن ورودی/خروجی','بار'],
+    'XL6009 Boost Module':['ورودی DC','خروجی بالاتر','خازن','بار'],
+    'TP4056 Charger Module':['باتری Li-ion 1S','USB/5V','بار','حفاظت'],
+    'PAM8403 Audio Module':['ورودی صوت','2× اسپیکر','5V','خازن کوپلینگ'],
+    'MAX7219 8×8 Matrix':['Arduino/ESP32','SPI','ماتریس LED','5V'],
+    'OLED 0.96 I2C':['SDA','SCL','VCC','GND'],
+    'LCD 16×2 I2C':['SDA','SCL','VCC','GND'],
+    'HC-SR04':['Trig','Echo','5V','GND'],
+    'PIR HC-SR501':['VCC','OUT','GND'],
+    'DHT22 Module':['VCC','DATA','GND'],
+    'LDR Sensor Module':['VCC','DO','GND'],
+    'NE555 Timer Module':['VCC','GND','OUT','تنظیم RC'],
+    'LM358 Op-Amp Module':['VCC','GND','IN','OUT'],
+    'ADS1115 ADC Module':['VDD','GND','SDA','SCL','A0–A3'],
+    'PC817 Optocoupler Module':['ورودی LED','خروجی ایزوله','VCC','GND']
+  };
+  const parts=common[b[0]]||b[5].split('،');
+  document.getElementById('boardOut').innerHTML=`<b>🧩 ${b[0]}</b><br><span class="help">${b[6]}</span><hr><b>مشخصات:</b> ${b[1]} | تغذیه ${b[2]} | ${b[3]} | ${b[4]}<br><b>قطعات/اتصالات پیشنهادی:</b> ${parts.join(' · ')}<br><button class="b" onclick="designHint('${b[1].replace(/'/g,"\\'")}')">🔧 ساخت بلوک مدار</button>`;
+}
+
+function useBoardInDesign(i){
+  const b=BOARDS[i]; if(!b) return;
+  openDesigner(b[0],'برد آماده',b[3],b);
+}
+function openDesigner(name,type,code,board){
+  const d=document.getElementById('designer'); if(!d) return;
+  d.classList.add('open'); document.body.classList.add('designer-open');
+  document.getElementById('designerTitle').textContent=name;
+  document.getElementById('designerSub').textContent=(board?board[6]:'قطعه انتخاب‌شده برای طراحی مدار');
+  document.getElementById('designerParts').innerHTML=`<span class="design-chip">${type}: ${name}</span><span class="design-chip ltr">${code||''}</span>`;
+  addDesignBlock(name,type,code||'');
+  if(board) addDesignBlock('تغذیه / ورودی','بلوک','VCC · GND');
+  drawDesigner();
+}
+function closeDesigner(){const d=document.getElementById('designer');if(d){d.classList.remove('open');document.body.classList.remove('designer-open')}}
+let designBlocks=[],designPaused=false,designZoom=1;
+function addDesignBlock(name,type,code){
+  const id='b'+Date.now()+Math.random().toString(16).slice(2);
+  designBlocks.push({id,name,type,code,x:120+designBlocks.length*90,y:120+designBlocks.length*45});
+  renderDesignBlocks();
+}
+function partGraphic(b){
+  const code=String(b.code||'').toUpperCase(), name=String(b.name||'');
+  if(code==='R' || /مقاومت|RESISTOR/i.test(name)) return `<line x1="-88" y1="0" x2="-48" y2="0" class="part-pin"/><polyline points="-48,0 -38,-12 -28,12 -18,-12 -8,12 2,-12 12,12 22,0" fill="none" class="part-metal"/><line x1="22" y1="0" x2="88" y2="0" class="part-pin"/><text x="0" y="-22" text-anchor="middle" class="part-mark">R</text>`;
+  if(code==='C' || /خازن|CAPACITOR/i.test(name)) return `<line x1="-88" y1="0" x2="-12" y2="0" class="part-pin"/><line x1="-8" y1="-20" x2="-8" y2="20" class="part-metal"/><line x1="8" y1="-20" x2="8" y2="20" class="part-metal"/><line x1="12" y1="0" x2="88" y2="0" class="part-pin"/><text x="0" y="-25" text-anchor="middle" class="part-mark">C</text>`;
+  if(code==='D' || /دیود|DIODE/i.test(name)) return `<line x1="-88" y1="0" x2="-25" y2="0" class="part-pin"/><polygon points="-25,-18 -25,18 8,0" fill="none" stroke="#d8dfe3" stroke-width="2"/><line x1="8" y1="-20" x2="8" y2="20" class="part-metal"/><line x1="8" y1="0" x2="88" y2="0" class="part-pin"/><text x="-8" y="-25" text-anchor="middle" class="part-mark">D</text>`;
+  if(code==='Q' || /ترانزیستور|TRANSISTOR|MOSFET/i.test(name)) return `<line x1="-88" y1="0" x2="-30" y2="0" class="part-pin"/><circle cx="0" cy="0" r="28" class="part-body"/><line x1="-8" y1="-18" x2="-8" y2="18" class="part-metal"/><line x1="-8" y1="-8" x2="18" y2="-24" class="part-metal"/><line x1="-8" y1="8" x2="18" y2="24" class="part-metal"/><line x1="18" y1="-24" x2="88" y2="-24" class="part-pin"/><line x1="18" y1="24" x2="88" y2="24" class="part-pin"/><text x="0" y="5" text-anchor="middle" class="part-mark">Q</text>`;
+  if(code==='OP' || /اپ.?امپ|LM358|NE555/i.test(name)) return `<line x1="-88" y1="-18" x2="-45" y2="-18" class="part-pin"/><line x1="-88" y1="18" x2="-45" y2="18" class="part-pin"/><polygon points="-45,-34 -45,34 30,0" class="part-body"/><line x1="30" y1="0" x2="88" y2="0" class="part-pin"/><text x="-7" y="5" text-anchor="middle" class="part-mark">${code==='OP'?'OP':'IC'}</text>`;
+  if(code==='VCC' || /منبع|برد آماده|VCC/i.test(name)) return `<circle cx="0" cy="0" r="25" class="part-body"/><line x1="0" y1="-25" x2="0" y2="-48" class="part-pin"/><line x1="0" y1="25" x2="0" y2="48" class="part-pin"/><text x="0" y="6" text-anchor="middle" class="part-mark">V</text>`;
+  return `<rect x="-58" y="-28" width="116" height="56" rx="8" class="part-body"/><line x1="-88" y1="0" x2="-58" y2="0" class="part-pin"/><line x1="58" y1="0" x2="88" y2="0" class="part-pin"/><text x="0" y="4" text-anchor="middle" class="part-mark">${name.slice(0,12)}</text>`;
+}
+function renderDesignBlocks(){
+  const layer=document.getElementById('designBlocks'); if(!layer)return;
+  const wires=designBlocks.slice(1).map((b,i)=>{const a=designBlocks[i];return `<line x1="${a.x+88}" y1="${a.y}" x2="${b.x-88}" y2="${b.y}" class="part-pin"/><circle cx="${(a.x+b.x)/2}" cy="${(a.y+b.y)/2}" r="3" fill="#ffe51b"/>`;}).join('');
+  layer.innerHTML=wires+designBlocks.map((b)=>`<g class="design-node" transform="translate(${b.x} ${b.y})" onclick="selectDesignBlock('${b.id}')">${partGraphic(b)}<text x="0" y="48" text-anchor="middle" class="node-sub">${String(b.name).slice(0,20)}</text><text x="0" y="62" text-anchor="middle" class="part-value">${String(b.code||b.type).slice(0,20)}</text><circle cx="-88" cy="0" r="4" class="pin"/><circle cx="88" cy="0" r="4" class="pin"/></g>`).join('');
+}
+function selectDesignBlock(id){
+  const b=designBlocks.find(x=>x.id===id); if(!b)return;
+  document.getElementById('designerStatus').textContent=`انتخاب شد: ${b.name} — ${b.code||b.type}`;
+}
+function drawDesigner(){
+  const svg=document.getElementById('designerSvg'); if(!svg)return;
+  svg.innerHTML=`<defs><pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse"><path d="M24 0H0V24" fill="none" stroke="rgba(255,255,255,.06)" stroke-width="1"/><circle cx="0" cy="0" r="1.3" fill="rgba(255,215,0,.18)"/></pattern><filter id="glow"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs><rect width="100%" height="100%" fill="url(#grid)"/><g id="wires"><path d="M40 80 H760" class="power-line"></path><path d="M40 410 H760" class="ground-line"></path><text x="42" y="68" class="rail-label">VCC</text><text x="42" y="400" class="rail-label">GND</text></g><g id="designBlocks"></g>`;
+  renderDesignBlocks();
+  drawWave();
+}
+let waveFrame=0;
+function drawWave(){
+  const c=document.getElementById('waveCanvas');if(!c)return; const ctx=c.getContext('2d');const w=c.width=Math.max(1,c.clientWidth*2),h=c.height=Math.max(1,c.clientHeight*2);ctx.clearRect(0,0,w,h);ctx.save();ctx.scale(2,2);const W=c.clientWidth,H=c.clientHeight;
+  ctx.strokeStyle='rgba(255,255,255,.10)';ctx.lineWidth=1;for(let x=0;x<W;x+=40){ctx.beginPath();ctx.moveTo(x,0);ctx.lineTo(x,H);ctx.stroke()}for(let y=0;y<H;y+=30){ctx.beginPath();ctx.moveTo(0,y);ctx.lineTo(W,y);ctx.stroke()}
+  const top=15,mid=6.5,bot=-2,now=performance.now()/1000;
+  const yForV=v=>H-((v-bot)/(top-bot))*H;
+  ctx.strokeStyle='#ffe51b';ctx.lineWidth=2;ctx.beginPath();ctx.moveTo(0,yForV(top));ctx.lineTo(W,yForV(top));ctx.stroke();
+  ctx.strokeStyle='#35d34a';ctx.beginPath();ctx.moveTo(0,yForV(mid));ctx.lineTo(W,yForV(mid));ctx.stroke();
+  ctx.strokeStyle='#4169ff';ctx.lineWidth=2.5;ctx.beginPath();let lastV=0;for(let x=0;x<W;x++){const v=6.5+8.5*Math.sin(x/42-now*5.5);lastV=v;const y=yForV(v);x?ctx.lineTo(x,y):ctx.moveTo(x,y)}ctx.stroke();
+  const markerX=(now*75)%W;const markerV=6.5+8.5*Math.sin(markerX/42-now*5.5);ctx.fillStyle='#fff200';ctx.beginPath();ctx.arc(markerX,yForV(markerV),5,0,Math.PI*2);ctx.fill();
+  ctx.strokeStyle='rgba(255,255,255,.25)';ctx.beginPath();ctx.moveTo(markerX,0);ctx.lineTo(markerX,H);ctx.stroke();ctx.restore();
+  const wt=document.querySelector('.wave-time');if(wt)wt.textContent=((now*1000)%10000).toFixed(1)+' ms';
+  if(!designPaused)waveFrame=requestAnimationFrame(drawWave);
+}
+function toggleDesignPause(){designPaused=!designPaused;document.getElementById('pauseDesign').textContent=designPaused?'▶':'Ⅱ';if(designPaused&&waveFrame)cancelAnimationFrame(waveFrame);if(!designPaused)drawWave()}
+function resetDesign(){designBlocks=[];designZoom=1;document.getElementById('designerStatus').textContent='طراحی جدید آماده است.';document.getElementById('designViewport').style.transform='scale(1)';document.getElementById('zoomValue').textContent='100%';drawDesigner()}
+function zoomDesign(delta){designZoom=Math.max(.7,Math.min(1.5,designZoom+delta));document.getElementById('designViewport').style.transform=`scale(${designZoom})`;document.getElementById('zoomValue').textContent=Math.round(designZoom*100)+'%'}
+function addQuickPart(name,code){addDesignBlock(name,'قطعه',code);document.getElementById('designerStatus').textContent=`${name} به طراحی اضافه شد.`}
+
+
+/* Project editor: draggable components, pin-to-pin wiring and animated current */
+let projectParts=[],projectWires=[],projectPinPick=null,projectRunning=false,projectFrame=0,projectZoom=1,projectDrag=null,projectPan={x:0,y:0},projectPanning=null,projectMode='2d',projectLedColor='#ff3030';
+function openProject(){
+  const e=$('projectEditor'); if(!e)return;
+  e.classList.add('open');document.body.classList.add('project-open');newProject();
+}
+
+let componentPickerCat='همه';
+function componentKind(code){
+  const m={R:'R',POT:'R',NTC:'R',PTC:'R',C:'C',L:'L',LED:'LED','1N4007':'D','1N4148':'D',ZENER:'D',SCHOTTKY:'D',PD:'D',BRIDGE:'D','2N2222':'Q','BC547':'Q','BC557':'Q','TIP120':'Q','IRFZ44N':'Q','IRLZ44N':'Q',MOSFET:'Q',IGBT:'Q',SCR:'Q',TRIAC:'Q',DIAC:'D',NE555:'IC',LM358:'OP',LM324:'OP',LM393:'IC',7805:'IC',7812:'IC',AMS1117:'IC',PC817:'IC',MOC3021:'IC',ADC:'IC',DAC:'IC'};
+  return m[code]||'GEN';
+}
+function componentThumb(name,code,cat){
+  const k=componentKind(code); const label=(code||name).slice(0,10);
+  if(k==='R')return `<svg viewBox="0 0 100 70"><path d="M5 35h18l6-12 8 24 8-24 8 24 8-24 8 12h22" fill="none" stroke="#d7dce0" stroke-width="4" stroke-linecap="round"/><rect x="30" y="22" width="40" height="26" rx="4" fill="#c99b63" stroke="#f1d3a1" stroke-width="2"/><path d="M39 23v24M48 23v24M57 23v24" stroke="#7b3d28" stroke-width="3"/><path d="M23 35h7M70 35h7" stroke="#ddd" stroke-width="3"/></svg>`;
+  if(k==='C')return `<svg viewBox="0 0 100 70"><path d="M6 35h34M60 35h34" stroke="#ddd" stroke-width="4"/><path d="M40 16v38M60 16v38" stroke="#ddd" stroke-width="5"/><path d="M43 19h14" stroke="#54c8ff" stroke-width="4"/><text x="50" y="64" text-anchor="middle" fill="#8deaff" font-size="9">${label}</text></svg>`;
+  if(k==='LED'||k==='D')return `<svg viewBox="0 0 100 70"><path d="M5 35h25M70 35h25" stroke="#ddd" stroke-width="4"/><path d="M30 16l38 19-38 19z" fill="${k==='LED'?'#e52f3d':'#202a31'}" stroke="#fff" stroke-width="2"/><path d="M70 12v46" stroke="#ddd" stroke-width="4"/>${k==='LED'?'<path d="M70 15l12-9M76 25l12-9" stroke="#ff6670" stroke-width="2"/>':''}</svg>`;
+  if(k==='Q')return `<svg viewBox="0 0 100 70"><circle cx="50" cy="35" r="22" fill="#1d252b" stroke="#d9e0e5" stroke-width="3"/><path d="M44 20v30M44 27l20-12M44 43l20 12M64 15v-7M64 55v7" stroke="#d9e0e5" stroke-width="3"/><text x="50" y="38" text-anchor="middle" fill="#ffd83d" font-size="9">Q</text></svg>`;
+  if(k==='OP'||k==='IC')return `<svg viewBox="0 0 100 70"><rect x="20" y="10" width="60" height="50" rx="5" fill="#171d22" stroke="#dce4e8" stroke-width="3"/><path d="M28 18v34M72 18v34" stroke="#555" stroke-width="2"/><text x="50" y="39" text-anchor="middle" fill="#ffd83d" font-size="10" font-weight="700">${label}</text><circle cx="22" cy="18" r="2" fill="#ddd"/><circle cx="78" cy="18" r="2" fill="#ddd"/></svg>`;
+  return `<svg viewBox="0 0 100 70"><rect x="13" y="17" width="74" height="36" rx="7" fill="#1b242a" stroke="#cfd8dd" stroke-width="2"/><circle cx="25" cy="26" r="3" fill="#ffd83d"/><circle cx="25" cy="44" r="3" fill="#ffd83d"/><circle cx="75" cy="26" r="3" fill="#ffd83d"/><circle cx="75" cy="44" r="3" fill="#ffd83d"/><text x="50" y="39" text-anchor="middle" fill="#fff" font-size="9">${label}</text></svg>`;
+}
+function openComponentPicker(){const e=$('componentPicker');if(!e)return;e.classList.add('open');e.setAttribute('aria-hidden','false');componentPickerCat='همه';$('componentSearch').value='';renderComponentPicker()}
+function closeComponentPicker(){const e=$('componentPicker');if(e)e.classList.remove('open')}
+function renderComponentPicker(){
+  const cats=['همه',...new Set(PARTS.map(x=>x[4]))],cs=$('componentCats'),list=$('componentList');
+  cs.innerHTML=cats.map(c=>`<button class="${c===componentPickerCat?'active':''}" onclick="componentPickerCat='${c.replace(/'/g,"\'")}';renderComponentPicker()">${c}</button>`).join('');
+  const q=($('componentSearch').value||'').trim().toLowerCase();
+  const arr=PARTS.filter(x=>(componentPickerCat==='همه'||x[4]===componentPickerCat)&&(!q||x.join(' ').toLowerCase().includes(q)));
+  list.innerHTML=arr.map((x,i)=>`<div class="component-item" onclick="chooseComponent(${PARTS.indexOf(x)})"><div class="component-thumb">${componentThumb(x[0],x[1],x[4])}</div><div><b>${x[0]}</b><small>${x[1]} · ${x[4]}</small><small>${x[2]}</small><div class="component-add">＋ افزودن به پروژه</div></div></div>`).join('')||'<div class="smart-card">قطعه‌ای پیدا نشد.</div>';
+}
+function chooseComponent(i){const x=PARTS[i];if(!x)return;const kind=componentKind(x[1]);const name=x[0],value=x[1]||name;addProjectPart(kind,name,value);closeComponentPicker()}
+
+function closeProject(){
+  const e=$('projectEditor');if(e)e.classList.remove('open');
+  document.body.classList.remove('project-open');projectRunning=false;if(projectFrame)cancelAnimationFrame(projectFrame);
+}
+function newProject(){
+  projectParts=[];projectWires=[];projectPinPick=null;projectRunning=false;projectPan={x:0,y:0};projectZoom=1;projectMode='2d';
+  document.querySelector('.project-stage')?.classList.remove('mode-3d');
+  applyProjectTransform();
+  $('projectState').textContent='مدار باز';$('projectCurrent').textContent='I = 0 mA';
+  renderProject();
+}
+function addProjectPart(kind,name,value,x,y){
+  const id='p'+Date.now()+Math.random().toString(16).slice(2);
+  const defaults={V:{x:180,y:250},R:{x:400,y:250},LED:{x:610,y:250},C:{x:400,y:390},SW:{x:610,y:390},GND:{x:820,y:390},Q:{x:610,y:140},L:{x:400,y:140},D:{x:610,y:140},BUZ:{x:820,y:250}};
+  const d=defaults[kind]||{x:300+Math.random()*300,y:180+Math.random()*260};
+  projectParts.push({id,kind,name,value,x:x||d.x,y:y||d.y,on:kind==='SW'?true:true});
+  renderProject(); if($('projectBOM')?.classList.contains('open'))renderBOM();
+}
+function partPins(p){
+  if(p.kind==='GND')return [{id:'g',x:p.x,y:p.y-38}];
+  if(p.kind==='V')return [{id:'+',x:p.x-58,y:p.y},{id:'-',x:p.x+58,y:p.y}];
+  if(p.kind==='C')return [{id:'1',x:p.x-58,y:p.y},{id:'2',x:p.x+58,y:p.y}];
+  if(p.kind==='Q')return [{id:'B',x:p.x-58,y:p.y},{id:'C',x:p.x+58,y:p.y-25},{id:'E',x:p.x+58,y:p.y+25}]; if(p.kind==='OP')return [{id:'+',x:p.x-58,y:p.y-18},{id:'-',x:p.x-58,y:p.y+18},{id:'O',x:p.x+58,y:p.y}];
+  return [{id:'1',x:p.x-58,y:p.y},{id:'2',x:p.x+58,y:p.y}];
+}
+function projectGraphic(p){
+  if(p.kind==='R')return `<line x1="-58" y1="0" x2="-35" y2="0" class="project-metal"/><polyline points="-35,0 -26,-12 -17,12 -8,-12 1,12 10,-12 19,12 28,0" class="project-metal"/><line x1="28" y1="0" x2="58" y2="0" class="project-metal"/><text x="0" y="-23" text-anchor="middle" class="project-mark">R</text>`;
+  if(p.kind==='LED')return `<line x1="-58" y1="0" x2="-25" y2="0" class="project-metal"/><polygon points="-25,-18 -25,18 8,0" class="project-body"/><line x1="8" y1="-20" x2="8" y2="20" class="project-metal"/><path d="M20 -17l12 -10M28 -8l12 -10" class="project-metal"/><line x1="8" y1="0" x2="58" y2="0" class="project-metal"/><text x="0" y="-25" text-anchor="middle" class="project-mark">LED</text>`;
+  if(p.kind==='L')return `<line x1="-58" y1="0" x2="-35" y2="0" class="project-metal"/><path d="M-35 0 C-25 -30 -15 30 -5 0 S15 -30 25 0 S45 30 55 0" class="project-metal"/><text x="0" y="-30" text-anchor="middle" class="project-mark">L</text>`;
+  if(p.kind==='D')return `<line x1="-58" y1="0" x2="-25" y2="0" class="project-metal"/><polygon points="-25,-18 -25,18 8,0" class="project-body"/><line x1="8" y1="-20" x2="8" y2="20" class="project-metal"/><line x1="8" y1="0" x2="58" y2="0" class="project-metal"/><text x="0" y="-25" text-anchor="middle" class="project-mark">D</text>`;
+  if(p.kind==='OP')return `<polygon points="-28,-30 28,0 -28,30" class="project-body"/><text x="-17" y="-8" class="project-mark">+</text><text x="-17" y="15" class="project-mark">−</text><line x1="-58" y1="-18" x2="-28" y2="-18" class="project-metal"/><line x1="-58" y1="18" x2="-28" y2="18" class="project-metal"/><line x1="28" y1="0" x2="58" y2="0" class="project-metal"/><text x="0" y="-40" text-anchor="middle" class="project-mark">OP</text>`; if(p.kind==='M')return `<circle cx="0" cy="0" r="29" class="project-body"/><text x="0" y="7" text-anchor="middle" class="project-mark">M</text><line x1="-58" y1="0" x2="-29" y2="0" class="project-metal"/><line x1="29" y1="0" x2="58" y2="0" class="project-metal"/>`; if(p.kind==='RELAY')return `<rect x="-35" y="-24" width="70" height="48" rx="8" class="project-body"/><path d="M-10 8L8 -8M8 -8L18 -8" class="project-metal"/><text x="0" y="-31" text-anchor="middle" class="project-mark">RELAY</text>`; if(p.kind==='BUZ')return `<circle cx="0" cy="0" r="28" class="project-body"/><path d="M-10 -5Q0 -15 10 -5M-14 5Q0 -10 14 5" class="project-metal"/><line x1="-58" y1="0" x2="-28" y2="0" class="project-metal"/><line x1="28" y1="0" x2="58" y2="0" class="project-metal"/><text x="0" y="-34" text-anchor="middle" class="project-mark">BZ</text>`;
+  if(p.kind==='C')return `<line x1="-58" y1="0" x2="-10" y2="0" class="project-metal"/><line x1="-8" y1="-22" x2="-8" y2="22" class="project-metal"/><line x1="8" y1="-22" x2="8" y2="22" class="project-metal"/><line x1="10" y1="0" x2="58" y2="0" class="project-metal"/><text x="0" y="-27" text-anchor="middle" class="project-mark">C</text>`;
+  if(p.kind==='V')return `<circle cx="0" cy="0" r="34" class="project-body"/><line x1="-58" y1="0" x2="-34" y2="0" class="project-metal"/><line x1="34" y1="0" x2="58" y2="0" class="project-metal"/><text x="0" y="5" text-anchor="middle" class="project-mark">+ −</text><text x="0" y="-45" text-anchor="middle" class="project-mark">V</text>`;
+  if(p.kind==='GND')return `<line x1="0" y1="-38" x2="0" y2="-10" class="project-metal"/><path d="M-20 0H20M-13 8H13M-6 16H6" class="project-metal"/><text x="0" y="34" text-anchor="middle" class="project-mark">GND</text>`;
+  if(p.kind==='SW')return `<line x1="-58" y1="0" x2="-18" y2="0" class="project-metal"/><line x1="18" y1="0" x2="58" y2="0" class="project-metal"/><line x1="-18" y1="0" x2="18" y2="-24" class="project-metal"/><circle cx="-18" cy="0" r="5" class="project-body"/><circle cx="18" cy="0" r="5" class="project-body"/><text x="0" y="-30" text-anchor="middle" class="project-mark">SW</text>`;
+  if(p.kind==='Q')return `<line x1="-58" y1="0" x2="-24" y2="0" class="project-metal"/><circle cx="0" cy="0" r="27" class="project-body"/><line x1="-8" y1="-18" x2="-8" y2="18" class="project-metal"/><line x1="-8" y1="-8" x2="22" y2="-24" class="project-metal"/><line x1="-8" y1="8" x2="22" y2="24" class="project-metal"/><line x1="22" y1="-24" x2="58" y2="-24" class="project-metal"/><line x1="22" y1="24" x2="58" y2="24" class="project-metal"/><text x="0" y="5" text-anchor="middle" class="project-mark">Q</text>`;
+  return `<rect x="-45" y="-25" width="90" height="50" rx="9" class="project-body"/><text x="0" y="5" text-anchor="middle" class="project-mark">${p.kind}</text>`;
+}
+function wireKey(a,b){return [a.id+':'+a.pin,b.id+':'+b.pin].sort().join('|')}
+function isLiveWire(w){
+  const a=projectParts.find(p=>p.id===w.a.id),b=projectParts.find(p=>p.id===w.b.id);
+  if(!a||!b)return false;
+  const hasV=projectParts.some(p=>p.kind==='V'),hasG=projectParts.some(p=>p.kind==='GND');
+  return projectRunning&&hasV&&hasG;
+}
+function projectCurrent(){const v=projectParts.find(p=>p.kind==='V');if(!v)return 0;const vv=parseFloat(String(v.value).replace(/[^0-9.]/g,''))||12;const rs=projectParts.filter(p=>p.kind==='R').reduce((a,p)=>a+(parseFloat(String(p.value).replace(/[^0-9.]/g,''))||1000),0);const hasG=projectParts.some(p=>p.kind==='GND');const path=projectWires.length>=Math.max(2,projectParts.filter(p=>p.kind!=='GND').length)&&hasG;if(!path)return 0;const drop=projectParts.some(p=>p.kind==='LED')?2:0;return Math.max(0,(vv-drop)/Math.max(1,rs))*1000;}
+function getCircuitStatus(){const v=projectParts.find(p=>p.kind==='V'),g=projectParts.find(p=>p.kind==='GND'),rs=projectParts.filter(p=>p.kind==='R'),led=projectParts.find(p=>p.kind==='LED'),i=projectCurrent(),issues=[];if(!v)issues.push(['bad','منبع ولتاژ وجود ندارد.']);if(!g)issues.push(['bad','زمین (GND) اضافه نشده است.']);if(v&&rs.length===0&&projectWires.length>0)issues.push(['bad','احتمال اتصال کوتاه: بار مقاومتی در مسیر دیده نمی‌شود.']);if(i>80)issues.push(['warn','جریان بالا است؛ توان مقاومت و سیم‌کشی را بررسی کن.']);if(led&&i>0&&i<5)issues.push(['warn','جریان LED کم است و ممکن است نور کافی نداشته باشد.']);if(!issues.length)issues.push(['ok',i>0?'مدار مسیر بسته دارد و جریان قابل محاسبه است.':'مدار آماده تحلیل است.']);return{v,g,rs,led,i,issues};}
+
+function selectProjectPin(pid,pin){
+  if(projectPinPick && projectPinPick.id===pid){projectPinPick=null;renderProject();return}
+  if(!projectPinPick){projectPinPick={id:pid,pin};renderProject();return}
+  if(projectPinPick.id===pid){projectPinPick=null;renderProject();return}
+  const w={a:{id:projectPinPick.id,pin:projectPinPick.pin},b:{id:pid,pin}};
+  const key=wireKey(w.a,w.b);
+  if(!projectWires.some(x=>wireKey(x.a,x.b)===key))projectWires.push(w);
+  projectPinPick=null;renderProject();
+}
+function pinPoint(ref){
+  const p=projectParts.find(x=>x.id===ref.id);if(!p)return {x:0,y:0};
+  return partPins(p).find(x=>x.id===ref.pin)||partPins(p)[0];
+}
+function wirePath(w){
+  const a=pinPoint(w.a),b=pinPoint(w.b),mx=(a.x+b.x)/2;
+  return `M ${a.x} ${a.y} H ${mx} V ${b.y} H ${b.x}`;
+}
+function renderProject(){
+  const svg=$('projectSvg');if(!svg)return;
+  const wires=projectWires.map(w=>`<path d="${wirePath(w)}" class="project-wire ${isLiveWire(w)?'live':''}"></path>`).join('');
+  const nodes=projectParts.map(p=>{
+    const live=projectRunning&&(p.kind==='V'||p.kind==='R'||p.kind==='LED');
+    const pins=partPins(p).map(pin=>`<circle cx="${pin.x-p.x}" cy="${pin.y-p.y}" r="7" class="project-pin ${projectPinPick&&projectPinPick.id===p.id&&projectPinPick.pin===pin.id?'selected':''}" onclick="event.stopPropagation();selectProjectPin('${p.id}','${pin.id}')"></circle>`).join('');
+    const graphic=projectGraphic(p).replace('class="project-body"', `class="project-body ${p.kind==='LED'&&live?'project-led-glow':''}"`);
+    return `<g class="project-node" transform="translate(${p.x} ${p.y})" onpointerdown="startProjectDrag(event,'${p.id}')" style="--led-color:${projectLedColor}">${graphic}${pins}<text x="0" y="48" text-anchor="middle" class="project-value">${p.name}</text><text x="0" y="62" text-anchor="middle" class="project-value">${p.value}</text></g>`;
+  }).join('');
+  svg.innerHTML=`<defs><filter id="projectGlow"><feGaussianBlur stdDeviation="2.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs><g>${wires}</g><g>${nodes}</g>`;
+  const i=projectCurrent(),v=projectParts.find(p=>p.kind==='V')?.value||'12V';
+  $('projectCurrent').textContent=`I = ${i.toFixed(1)} mA`;$('projectVoltage').textContent=`V = ${v}`;
+  $('projectState').textContent=i>0?'جریان برقرار است':'مدار باز';
+}
+function startProjectDrag(e,id){
+  if(e.target.classList.contains('project-pin'))return;
+  const p=projectParts.find(x=>x.id===id);if(!p)return;
+  projectDrag={id,startX:e.clientX,startY:e.clientY,ox:p.x,oy:p.y};
+  e.currentTarget.setPointerCapture?.(e.pointerId);
+}
+document.addEventListener('pointermove',e=>{
+  if(!projectDrag)return;
+  const svg=$('projectSvg');if(!svg)return;
+  const r=svg.getBoundingClientRect(),p=projectParts.find(x=>x.id===projectDrag.id);if(!p)return;
+  p.x=Math.max(50,Math.min(950,projectDrag.ox+(e.clientX-projectDrag.startX)*1000/r.width));
+  p.y=Math.max(70,Math.min(570,projectDrag.oy+(e.clientY-projectDrag.startY)*620/r.height));
+  renderProject();
+});
+document.addEventListener('pointerup',()=>projectDrag=null);
+function toggleProjectRun(){projectRunning=!projectRunning;renderProject();if(projectRunning)animateProject()}
+function stopProjectRun(){projectRunning=false;if(projectFrame)cancelAnimationFrame(projectFrame);renderProject()}
+function animateProject(){
+  if(!projectRunning)return;
+  const svg=$('projectSvg');if(!svg)return;
+  const old=svg.querySelectorAll('.project-current-dot');old.forEach(x=>x.remove());
+  const t=performance.now()/700;
+  projectWires.forEach((w,idx)=>{
+    if(!isLiveWire(w))return;
+    const a=pinPoint(w.a),b=pinPoint(w.b),u=(t+idx*.23)%1;
+    const x=a.x+(b.x-a.x)*u,y=a.y+(b.y-a.y)*u;
+    const ns=document.createElementNS('http://www.w3.org/2000/svg','circle');ns.setAttribute('cx',x);ns.setAttribute('cy',y);ns.setAttribute('r','5');ns.setAttribute('class','project-current-dot');svg.appendChild(ns);
+  });
+  projectFrame=requestAnimationFrame(animateProject);
+}
+function toggleSmartLab(force){const e=$('smartLab');if(!e)return;e.classList.toggle('open',force===undefined?!e.classList.contains('open'):force);if(e.classList.contains('open'))runCircuitAnalysis()}function toggleBOM(){const e=$('projectBOM');if(!e)return;e.classList.toggle('open');if(e.classList.contains('open'))renderBOM()}function renderBOM(){const c=$('bomContent');if(!c)return;const m={};projectParts.forEach(p=>{const k=p.name+'|'+p.value;m[k]=(m[k]||0)+1});const rows=Object.entries(m).map(([k,n])=>{const q=k.split('|');return `<tr><td>${q[0]}</td><td>${q[1]}</td><td>${n}</td></tr>`}).join('');c.innerHTML=rows?`<table><thead><tr><th>قطعه</th><th>مقدار</th><th>تعداد</th></tr></thead><tbody>${rows}</tbody></table>`:'<div class="smart-card">هنوز قطعه‌ای اضافه نشده.</div>'}function runCircuitAnalysis(){const a=getCircuitStatus();const r=$('smartReadout');if(!r)return;r.innerHTML=`<div class="smart-card"><b>📊 وضعیت</b><br>ولتاژ: ${a.v?.value||'—'} · جریان: ${a.i.toFixed(2)} mA · سیم‌ها: ${projectWires.length}</div>`+a.issues.map(x=>`<div class="smart-card smart-${x[0]}">${x[1]}</div>`).join('')+`<div class="smart-card">💡 توان تقریبی مقاومت: ${(a.i*a.i*a.rs.reduce((z,p)=>z+(parseFloat(String(p.value).replace(/[^0-9.]/g,''))||1000),0)/1000000).toFixed(3)} W</div>`;renderProject()}function openScope(){toggleSmartLab(true);const r=$('smartReadout');r.innerHTML='<div class="smart-card"><b>📈 اسیلوسکوپ زنده</b><canvas id="voltScope" class="smart-scope" width="700" height="260"></canvas></div>';drawScope()}function drawScope(){const c=$('voltScope');if(!c)return;const x=c.getContext('2d'),W=c.width,H=c.height,t=performance.now()/1000;x.clearRect(0,0,W,H);x.strokeStyle='rgba(255,255,255,.1)';for(let i=0;i<10;i++){x.beginPath();x.moveTo(i*W/10,0);x.lineTo(i*W/10,H);x.stroke()}for(let i=0;i<6;i++){x.beginPath();x.moveTo(0,i*H/6);x.lineTo(W,i*H/6);x.stroke()}x.strokeStyle='#42e6ff';x.lineWidth=4;x.beginPath();for(let i=0;i<W;i++){const y=H/2-Math.sin(i/35-t*4)*H*.28*(projectRunning?1:.25);i?x.lineTo(i,y):x.moveTo(i,y)}x.stroke();requestAnimationFrame(drawScope)}function clearProjectWires(){projectWires=[];projectPinPick=null;renderProject();runCircuitAnalysis()}function autoRouteProject(){if(projectParts.length<2)return;projectWires=[];for(let i=0;i<projectParts.length-1;i++){const a=projectParts[i],b=projectParts[i+1];projectWires.push({a:{id:a.id,pin:partPins(a)[0].id},b:{id:b.id,pin:partPins(b)[0].id}})}renderProject();runCircuitAnalysis()}function saveVoltiraProject(){localStorage.setItem('voltira_project_v1',JSON.stringify({parts:projectParts,wires:projectWires,led:projectLedColor,mode:projectMode}));$('projectState').textContent='پروژه ذخیره شد ✓'}function loadVoltiraProject(){try{const d=JSON.parse(localStorage.getItem('voltira_project_v1')||'null');if(!d)return;projectLedColor=d.led||'#ff3030';$('projectLedColor').value=projectLedColor;projectParts=d.parts||[];projectWires=d.wires||[];setProjectMode(d.mode||'2d');renderProject();runCircuitAnalysis()}catch(e){$('projectState').textContent='خطا در بازیابی پروژه'}}function exportProjectJSON(){const b=new Blob([JSON.stringify({parts:projectParts,wires:projectWires,led:projectLedColor},null,2)],{type:'application/json'}),a=document.createElement('a');a.href=URL.createObjectURL(b);a.download='voltira-project.json';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000)}
+function loadDemoProject(){
+  const e=$('projectEditor');if(e&&!e.classList.contains('open')){e.classList.add('open');document.body.classList.add('project-open')}
+  projectParts=[];projectWires=[];projectPinPick=null;projectRunning=false;
+  addProjectPart('V','منبع 12V','12V',150,280);
+  addProjectPart('R','مقاومت','1kΩ',390,280);
+  addProjectPart('LED','LED','2V',620,280);
+  addProjectPart('GND','زمین','GND',820,420);
+  projectWires=[
+    {a:{id:projectParts[0].id,pin:'+'},b:{id:projectParts[1].id,pin:'1'}},
+    {a:{id:projectParts[1].id,pin:'2'},b:{id:projectParts[2].id,pin:'1'}},
+    {a:{id:projectParts[2].id,pin:'2'},b:{id:projectParts[3].id,pin:'g'}}
+  ];
+  renderProject();projectRunning=true;animateProject();
+}
+function setProjectLedColor(c){projectLedColor=c||'#ff3030';renderProject()}
+function setProjectMode(mode){projectMode=mode;const stage=document.querySelector('.project-stage');if(stage)stage.classList.toggle('mode-3d',mode==='3d');$('mode2d')?.classList.toggle('project-mode-active',mode==='2d');$('mode3d')?.classList.toggle('project-mode-active',mode==='3d');applyProjectTransform()}
+function applyProjectTransform(){const svg=$('projectSvg');if(!svg)return;const z=projectZoom;const t=`translate(${projectPan.x}px,${projectPan.y}px) scale(${z})`;svg.style.transform=projectMode==='3d'?`${t} rotateX(10deg) rotateZ(-1deg)`:t}
+function startProjectPan(e){if(e.target.closest && e.target.closest('.project-node'))return;projectPanning={sx:e.clientX,sy:e.clientY,ox:projectPan.x,oy:projectPan.y};$('projectSvg').setPointerCapture?.(e.pointerId)}
+window.addEventListener('pointermove',e=>{if(!projectPanning)return;projectPan.x=projectPanning.ox+(e.clientX-projectPanning.sx);projectPan.y=projectPanning.oy+(e.clientY-projectPanning.sy);applyProjectTransform()});
+window.addEventListener('pointerup',()=>projectPanning=null);
+function zoomProject(d){projectZoom=Math.max(.7,Math.min(1.8,projectZoom+d));applyProjectTransform();$('projectZoom').textContent=Math.round(projectZoom*100)+'%'}
+
+renderBoardCats();filterBoards();
+
+renderPartCats();filterParts();designLed();
+
+function enterVoltira(){
+  const landing=document.getElementById('voltiraLanding');
+  if(!landing) return;
+  landing.classList.add('exit');
+  setTimeout(()=>{
+    landing.remove();
+    window.scrollTo({top:0,behavior:'instant'});
+    document.querySelector('main')?.scrollIntoView({behavior:'smooth',block:'start'});
+  },450);
+}
+</script>
+<script>
+/* ===== Voltira Pro: advanced calculators, simulator, links, Gemini ===== */
+(function(){
+const fin=v=>v.every(Number.isFinite);
+const XC=[
+['LC رزونانس','f₀=1/(2π√(LC)) ، Q=√(L/C)/R',[['L (mH)',10],['C (nF)',100],['R سری (Ω)',10]],v=>{const L=v[0]*1e-3,C=v[1]*1e-9,f=1/(2*Math.PI*Math.sqrt(L*C)),Q=Math.sqrt(L/C)/v[2];return `f₀: <b>${eng(f,'Hz')}</b><br>Q: <b>${fa(Q)}</b> · پهنای باند: ${eng(f/Q,'Hz')}<br>Z₀: ${eng(Math.sqrt(L/C),'Ω')}`}],
+['پاسخ فیلتر RC پایین‌گذر','fc=1/(2πRC) ، |H|=1/√(1+(f/fc)²)',[['R (Ω)',10000],['C (nF)',100],['f (Hz)',159.15]],v=>{const fc=1/(2*Math.PI*v[0]*v[1]*1e-9),r=v[2]/fc,H=1/Math.sqrt(1+r*r);return `fc: <b>${eng(fc,'Hz')}</b><br>بهره: ${fa(H)} = <b>${fa(20*Math.log10(H))} dB</b><br>فاز: <b>${fa(-Math.atan(r)*180/Math.PI)}°</b>`}],
+['شارژ خازن (ثابت زمانی)','V(t)=Vs(1−e^(−t/τ)) ، τ=RC',[['Vs (V)',12],['R (Ω)',10000],['C (µF)',100],['t (ms)',1000]],v=>{const tau=v[1]*v[2]*1e-6,t=v[3]*1e-3;return `τ: <b>${eng(tau,'s')}</b> · ۵τ: ${eng(5*tau,'s')}<br>V(t): <b>${eng(v[0]*(1-Math.exp(-t/tau)),'V')}</b> · I(t): ${eng(v[0]/v[1]*Math.exp(-t/tau),'A')}`}],
+['انرژی خازن و سلف','E=½CV² ، E=½LI²',[['C (µF)',100],['V (V)',12],['L (mH)',10],['I (A)',2]],v=>`خازن: <b>${eng(.5*v[0]*1e-6*v[1]**2,'J')}</b> · بار Q=CV: ${eng(v[0]*1e-6*v[1],'C')}<br>سلف: <b>${eng(.5*v[2]*1e-3*v[3]**2,'J')}</b>`],
+['ترانسفورماتور','Vs=Vp·Ns/Np ، Ip=Is·Ns/Np',[['Vp (V)',220],['Np (دور)',1000],['Ns (دور)',100],['Is (A)',1]],v=>{const k=v[2]/v[1];return `Vs: <b>${eng(v[0]*k,'V')}</b> · Ip: <b>${eng(v[3]*k,'A')}</b><br>توان (ایده‌آل): ${eng(v[0]*k*v[3],'W')} · نسبت: ${fa(1/k)}:1`}],
+['سیم AWG و افت ولتاژ','d=0.127·92^((36−n)/39) mm ، ρ=1.68e-8 Ω·m',[['AWG',22],['جریان (A)',2],['طول یک‌طرفه (m)',5]],v=>{const d=.127*Math.pow(92,(36-v[0])/39),A=Math.PI*d*d/4,r=1.68e-8/(A*1e-6),vd=2*v[2]*v[1]*r;return `قطر: <b>${fa(d)} mm</b> · سطح: ${fa(A)} mm²<br>مقاومت: ${fa(r*1000)} mΩ/m<br>افت ولتاژ (رفت‌وبرگشت): <b>${fa(vd)} V</b><br>ظرفیت تقریبی ≈ ${fa(A*4)} A (قاعده ۴ A/mm²)`}],
+['عرض مسیر PCB (IPC-2221)','A=(I/(k·ΔT^0.44))^(1/0.725)',[['جریان (A)',2],['ΔT (°C)',10],['مس (oz)',1],['لایه: ۱=خارجی ۰=داخلی',1]],v=>{const k=v[3]?.048:.024,a=Math.pow(v[0]/(k*Math.pow(v[1],.44)),1/.725),w=a/(1.378*v[2]);return `عرض لازم: <b>${fa(w*.0254)} mm</b> (${fa(w)} mil)`}],
+['عمر باتری و Peukert','t=η·C/I ، t=H·(C/(I·H))^k',[['ظرفیت (mAh)',2000],['جریان بار (mA)',100],['بازده η (٪)',80],['k Peukert',1.2]],v=>{const C=v[0]/1000,I=v[1]/1000,H=20;return `ساده: <b>${fa(v[2]/100*v[0]/v[1])} ساعت</b><br>Peukert (H=20h): <b>${fa(H*Math.pow(C/(I*H),v[3]))} ساعت</b>`}],
+['دسی‌بل','dB=10log(P2/P1) ، 20log(V2/V1)',[['نسبت',100],['توان (mW)',1]],v=>`توان: <b>${fa(10*Math.log10(v[0]))} dB</b> · ولتاژ: <b>${fa(20*Math.log10(v[0]))} dB</b><br>${fa(v[1])} mW = <b>${fa(10*Math.log10(v[1]))} dBm</b> = ${fa(10*Math.log10(v[1]/1000))} dBW`],
+['سیستم اعداد','عدد صحیح دهدهی → باینری/هگز/مکمل ۲',[['عدد دهدهی',100]],v=>{const n=Math.trunc(v[0]);if(Math.abs(n)>2**31)return 'خارج از محدوده';const u=n>>>0;let t=n>=-128&&n<=127?((n&255).toString(2).padStart(8,'0')):'—';return `<span class="ltr">BIN: <b>${n<0?'-':''}${Math.abs(n).toString(2)}</b><br>OCT: ${n<0?'-':''}${Math.abs(n).toString(8)}<br>HEX: <b>${n<0?'-':''}${Math.abs(n).toString(16).toUpperCase()}</b><br>۸بیتی مکمل ۲: ${t}<br>۳۲بیتی: ${u.toString(2).padStart(32,'0')}</span>`}],
+['رگولاتور LM317','Vout=1.25(1+R2/R1)+50µA·R2',[['R1 (Ω)',240],['R2 (Ω)',720],['Vin (V)',12],['Iبار (mA)',500]],v=>{const vo=1.25*(1+v[1]/v[0])+5e-5*v[1],P=(v[2]-vo)*v[3]/1000;return `Vout: <b>${fa(vo)} V</b><br>توان تلف‌شده: <b>${fa(P)} W</b>${v[2]-vo<2?'<br>⚠️ افت ورودی-خروجی کمتر از ~۲V است':''}`}],
+['آپ‌امپ','معکوس: −Rf/Rin ، نامعکوس: 1+Rf/Rg',[['Rf (Ω)',100000],['Rin / Rg (Ω)',10000]],v=>`معکوس: <b>${fa(-v[0]/v[1])}</b> (${fa(20*Math.log10(v[0]/v[1]))} dB)<br>نامعکوس: <b>${fa(1+v[0]/v[1])}</b> (${fa(20*Math.log10(1+v[0]/v[1]))} dB)`],
+['طول آنتن','λ=c/f ، ضریب سرعت ≈ ۰٫۹۵',[['فرکانس (MHz)',433]],v=>{const l=299792458/(v[0]*1e6);return `λ: <b>${fa(l*100)} cm</b><br>λ/4: <b>${fa(l*25)} cm</b> (عملی ${fa(l*25*.95)} cm)<br>λ/2: ${fa(l*50)} cm`}],
+['هیت‌سینک','Rθsa=(Tj−Ta)/P−Rθjc−Rθcs',[['Tj max (°C)',125],['Ta (°C)',40],['P (W)',5],['Rθjc (°C/W)',1.5],['Rθcs (°C/W)',0.5]],v=>{const r=(v[0]-v[1])/v[2]-v[3]-v[4];return r>0?`Rθsa لازم: <b>${fa(r)} °C/W</b> یا کمتر`:'⚠️ حتی با هیت‌سینک ایده‌آل امن نیست؛ توان را کم کنید.'}],
+['مقاومت بیس ترانزیستور','Rb=(Vin−0.7)/(Ic/β_forced) ، β_forced=β/10',[['Vin (V)',5],['Ic (mA)',100],['β',100]],v=>{const ib=v[1]/1000/(v[2]/10);return `Ib: <b>${eng(ib,'A')}</b> · Rb: <b>${eng((v[0]-.7)/ib,'Ω')}</b>`}],
+['LED Strip','P=W/m×طول ، I=P/V',[['توان (W/m)',14.4],['طول (m)',5],['ولتاژ (V)',12]],v=>{const P=v[0]*v[1];return `توان: <b>${fa(P)} W</b> · جریان: <b>${fa(P/v[2])} A</b><br>آداپتور پیشنهادی (+۲۰٪): <b>${fa(P*1.2)} W</b>`}]
+];
+const box=document.getElementById('xbox');
+XC.forEach((c,ci)=>{const d=document.createElement('div');d.className='card xc';d.dataset.t=c[0].toLowerCase()+' '+c[1].toLowerCase();
+d.innerHTML=`<h3>${c[0]}</h3><p class="help ltr">${c[1]}</p><div class="row">${c[2].map((f,fi)=>`<div><label>${f[0]}</label><input type="number" step="any" id="x${ci}_${fi}" value="${f[1]}"></div>`).join('')}</div><div class="out" id="xo${ci}"></div>`;
+box.appendChild(d);
+const run=()=>{const v=c[2].map((_,fi)=>parseFloat(document.getElementById(`x${ci}_${fi}`).value)),o=document.getElementById('xo'+ci);if(!fin(v)){o.textContent='همه‌ی مقادیر را وارد کنید.';return}try{o.innerHTML=c[3](v)}catch(e){o.textContent='ورودی نامعتبر'}};
+d.addEventListener('input',run);run()});
+window.xFilter=()=>{const q=document.getElementById('xs').value.trim().toLowerCase();box.querySelectorAll('.xc').forEach(e=>e.style.display=e.dataset.t.includes(q)?'':'none')};
+
+/* ---------- Circuit simulator (Modified Nodal Analysis) ---------- */
+const PRE={'تقسیم ولتاژ':'V1 in 0 12\nR1 in out 10k\nR2 out 0 4.7k','شارژ RC':'V1 in 0 5\nR1 in out 10k\nC1 out 0 10u','فیلتر دو‌طبقه RC':'V1 in 0 5\nR1 in a 1k\nC1 a 0 100n\nR2 a out 10k\nC2 out 0 100n','منبع جریان':'I1 0 n1 0.01\nR1 n1 0 470'};
+const pv=s=>{const m=/^([+-]?[\d.]+(?:e[+-]?\d+)?)(meg|[kmunpgGM]?)/i.exec(s||'');if(!m)return NaN;const x={k:1e3,m:1e-3,u:1e-6,n:1e-9,p:1e-12,g:1e9,meg:1e6}[m[2]==='M'?'meg':m[2].toLowerCase()]||1;return parseFloat(m[1])*x};
+function parse(t){const el=[],nm=new Map();const id=n=>{n=n.toLowerCase();if(n==='0'||n==='gnd')return 0;if(!nm.has(n))nm.set(n,nm.size+1);return nm.get(n)};
+t.split('\n').forEach((l,i)=>{l=l.trim();if(!l||l[0]==='#'||l[0]===';')return;const p=l.split(/\s+/),ty=p[0][0].toUpperCase(),val=pv(p[3]);if(p.length<4||!'RCVI'.includes(ty)||!Number.isFinite(val))throw Error('خط '+(i+1)+' نامعتبر است: '+l);if((ty==='R'||ty==='C')&&val<=0)throw Error('خط '+(i+1)+': مقدار باید مثبت باشد');el.push({ty,name:p[0],a:id(p[1]),b:id(p[2]),v:val})});
+return{el,names:[...nm.keys()]}}
+function solve(A,b){const n=b.length;for(let i=0;i<n;i++){let m=i;for(let r=i+1;r<n;r++)if(Math.abs(A[r][i])>Math.abs(A[m][i]))m=r;if(Math.abs(A[m][i])<1e-18)throw Error('مدار ناپایدار است (گره شناور یا منبع ولتاژ موازی)');[A[i],A[m]]=[A[m],A[i]];[b[i],b[m]]=[b[m],b[i]];for(let r=i+1;r<n;r++){const f=A[r][i]/A[i][i];if(f){for(let c=i;c<n;c++)A[r][c]-=f*A[i][c];b[r]-=f*b[i]}}}
+const x=Array(n).fill(0);for(let i=n-1;i>=0;i--){let s=b[i];for(let c=i+1;c<n;c++)s-=A[i][c]*x[c];x[i]=s/A[i][i]}return x}
+function step(net,dt,prev){const n=net.names.length,vs=net.el.filter(e=>e.ty==='V'),S=n+vs.length,A=Array.from({length:S},()=>Array(S).fill(0)),b=Array(S).fill(0);
+const st=(i,j,g)=>{if(i){A[i-1][i-1]+=g}if(j){A[j-1][j-1]+=g}if(i&&j){A[i-1][j-1]-=g;A[j-1][i-1]-=g}};const vp=k=>k?prev[k-1]:0;let q=0;
+net.el.forEach(e=>{if(e.ty==='R')st(e.a,e.b,1/e.v);else if(e.ty==='C'){const g=dt?e.v/dt:1e-12;st(e.a,e.b,g);if(dt){const i=g*(vp(e.a)-vp(e.b));if(e.a)b[e.a-1]+=i;if(e.b)b[e.b-1]-=i}}else if(e.ty==='I'){if(e.a)b[e.a-1]-=e.v;if(e.b)b[e.b-1]+=e.v}else{const r=n+q++;if(e.a){A[e.a-1][r]+=1;A[r][e.a-1]+=1}if(e.b){A[e.b-1][r]-=1;A[r][e.b-1]-=1}b[r]=e.v}});
+if(!n)throw Error('هیچ گره‌ای (غیر از زمین) تعریف نشده است');return solve(A,b)}
+const fv=(x,k)=>k?x[k-1]:0;
+window.xSim=()=>{const o=document.getElementById('xso'),cv=document.getElementById('xcv'),g=cv.getContext('2d');g.clearRect(0,0,cv.width,cv.height);
+try{const net=parse(document.getElementById('xnet').value);if(!net.el.length)throw Error('مدار خالی است');const x=step(net,0,[]);
+let h='<b>نتیجه DC (حالت پایدار)</b><br>'+net.names.map((n,i)=>`V(${n}) = <b>${eng(x[i],'V')}</b>`).join(' · ');
+net.el.filter(e=>e.ty==='R').forEach(e=>{const vd=fv(x,e.a)-fv(x,e.b);h+=`<br>${e.name}: I=${eng(vd/e.v,'A')} · P=${eng(vd*vd/e.v,'W')}`});o.innerHTML=h;
+const T=parseFloat(document.getElementById('xtt').value)/1e3,dt=parseFloat(document.getElementById('xdt').value)*1e-6;if(!(T>0)||!(dt>0))return;
+const N=Math.min(Math.round(T/dt),20000);let cur=Array(net.names.length).fill(0);const tr=net.names.map(()=>[]);
+// شرایط اولیه: خازن‌ها تخلیه‌اند
+for(let k=0;k<N;k++){cur=step(net,dt,cur);cur.slice(0,net.names.length).forEach((v,i)=>tr[i].push(v))}
+let mn=0,mx=0;tr.forEach(a=>a.forEach(v=>{mn=Math.min(mn,v);mx=Math.max(mx,v)}));if(mx-mn<1e-12)mx=mn+1;const W=cv.width,H=cv.height,P=34,cols=['#00c8ff','#ffad1f','#ff5d8f','#7cf29c','#b388ff','#fff'];
+g.fillStyle='#060b14';g.fillRect(0,0,W,H);g.strokeStyle='#1d2942';g.fillStyle='#9aa7c0';g.font='12px monospace';for(let i=0;i<=4;i++){const y=P/2+(H-P-10)*i/4;g.beginPath();g.moveTo(P,y);g.lineTo(W-6,y);g.stroke();g.fillText((mx-(mx-mn)*i/4).toFixed(2)+'V',2,y+4)}g.fillText('0',P,H-2);g.fillText((T*1e3).toPrecision(3)+' ms',W-70,H-2);
+tr.forEach((a,i)=>{g.strokeStyle=cols[i%6];g.lineWidth=2;g.beginPath();a.forEach((v,k)=>{const X=P+(W-P-6)*k/(a.length-1||1),Y=P/2+(H-P-10)*(1-(v-mn)/(mx-mn));k?g.lineTo(X,Y):g.moveTo(X,Y)});g.stroke();g.fillStyle=cols[i%6];g.fillText('V('+net.names[i]+')',P+8+i*80,14)})}
+catch(e){o.textContent='⚠️ '+e.message}};
+const pb=document.getElementById('xpre');Object.keys(PRE).forEach(k=>{const b=document.createElement('button');b.textContent=k;b.onclick=()=>{document.getElementById('xnet').value=PRE[k];xSim()};pb.appendChild(b)});
+document.getElementById('xnet').value=PRE['شارژ RC'];xSim();
+
+/* ---------- External links ---------- */
+[['Falstad Circuit Simulator','شبیه‌ساز تعاملی مدار','https://www.falstad.com/circuit/'],['Tinkercad Circuits','مدار و آردوینو','https://www.tinkercad.com/circuits'],['Wokwi','شبیه‌ساز ESP32/Arduino','https://wokwi.com/'],['EasyEDA','طراحی شماتیک و PCB','https://easyeda.com/'],['KiCad','نرم‌افزار متن‌باز PCB','https://www.kicad.org/'],['CircuitLab','شبیه‌ساز آنلاین','https://www.circuitlab.com/'],['Octopart','جستجوی قطعه و قیمت','https://octopart.com/'],['LCSC','تأمین قطعه','https://www.lcsc.com/'],['DigiKey','قطعات و دیتاشیت','https://www.digikey.com/'],['Mouser','قطعات و دیتاشیت','https://www.mouser.com/'],['AllDatasheet','دیتاشیت قطعات','https://www.alldatasheet.com/'],['SnapEDA','فوت‌پرینت و مدل','https://www.snapeda.com/']].forEach(l=>{const a=document.createElement('a');a.href=l[2];a.target='_blank';a.rel='noopener noreferrer';a.className='card';a.style.cssText='text-decoration:none;color:inherit;margin:0';a.innerHTML=`<b style="color:#48d5ff">${l[0]} ↗</b><div class="help" style="margin:0">${l[1]}</div>`;document.getElementById('xlk').appendChild(a)});
+
+/* ---------- Gemini: real AI when an API key is entered ---------- */
+const _ask=window.ask;
+window.ask=async function(){const k=($('gk').value||'').trim(),q=$('ai').value.trim();if(!k||!q)return _ask();
+msg(q,'u');$('ai').value='';const w=msg('…','a');
+try{const ctx=(typeof search==='function'?search(q):[]).map(z=>z.x.c).join('\n').slice(0,3000);
+const r=await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent($('gm').value.trim()||'gemini-2.5-flash')}:generateContent`,{method:'POST',headers:{'Content-Type':'application/json','x-goog-api-key':k},body:JSON.stringify({systemInstruction:{parts:[{text:'You are an expert electronics tutor. Answer in Persian, concisely and accurately, with formulas and units. If unsure, say so.'}]},contents:[{role:'user',parts:[{text:(ctx?'Context:\n'+ctx+'\n\n':'')+q}]}]})});
+const j=await r.json();if(!r.ok)throw Error(j.error?.message||r.status);w.textContent=j.candidates?.[0]?.content?.parts?.map(p=>p.text).join('')||'پاسخی دریافت نشد.'}
+catch(e){w.textContent='⚠️ خطا در اتصال به Gemini: '+e.message+' (کلید یا نام مدل را بررسی کنید؛ بدون کلید، پاسخ آفلاین فعال است)'}};
+/* keyboard: 1-9 switches tabs */
+document.addEventListener('keydown',e=>{if(e.ctrlKey||e.metaKey||e.altKey||/INPUT|TEXTAREA|SELECT/.test(document.activeElement.tagName))return;const n=+e.key;if(n>=1&&n<=10)show(n-1)});
+})();
+
+</script>
+<script>if("serviceWorker"in navigator)addEventListener("load",()=>navigator.serviceWorker.register("sw.js").catch(()=>{}));</script>
+</body></html>
